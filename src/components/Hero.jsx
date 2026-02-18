@@ -2,6 +2,18 @@ import React from "react";
 import porto from "@/assets/porto.png";
 
 const Hero = () => {
+  const scrollToWorks = () => {
+    const element = document.getElementById("works");
+
+    if (element) {
+      const yOffset = -80; // tinggi navbar
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-black">
       {/* Darker Multi-layer Gradient Background - Black, Red, Brown */}
@@ -135,7 +147,10 @@ const Hero = () => {
                 className="absolute bottom-20 right-6 md:right-12 lg:right-20 animate-fadeInUp z-30"
                 style={{ animationDelay: "0.6s" }}
               >
-                <button className="group px-8 py-3 bg-gradient-to-r from-amber-700 to-orange-700 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-orange-600/40 transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                <button
+                  onClick={scrollToWorks}
+                  className="group px-8 py-3 bg-gradient-to-r from-amber-700 to-orange-700 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-orange-600/40 transition-all duration-300 hover:scale-105 flex items-center gap-2"
+                >
                   <span>View Projects</span>
                   <svg
                     className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"

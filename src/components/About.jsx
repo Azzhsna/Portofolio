@@ -182,9 +182,16 @@ const About = () => {
             }`}
             style={{ transitionDelay: "0.7s" }}
           >
-            <button className="px-10 py-4 bg-gradient-to-r from-red-600 via-black-600 to-orange-500 text-white rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105 relative overflow-hidden group">
-              <span className="relative z-10">CONTACT ME</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-black-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <button
+              onClick={() =>
+                window.open(
+                  "https://wa.me/6281372769449?text=Hi%20Azzah,%20I%20saw%20your%20portfolio!",
+                  "_blank"
+                )
+              }
+              className="px-10 py-4 bg-gradient-to-r from-red-600 via-black-600 to-orange-500 text-white rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+            >
+              CONTACT ME
             </button>
           </div>
 

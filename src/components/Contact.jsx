@@ -1,7 +1,17 @@
 const Contact = () => {
   const socialLinks = [
-    { name: "LinkedIn", url: "#" },
-    { name: "GitHub", url: "#" },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/azzhsna",
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/Azzhsna",
+    },
+    {
+      name: "WhatsApp",
+      url: "https://wa.me/6281372769449",
+    },
   ];
 
   return (
@@ -20,26 +30,33 @@ const Contact = () => {
             extraordinary together.
           </p>
 
+          {/* Email & Phone */}
           <div className="flex flex-col md:flex-row gap-6 justify-center mb-16">
             <a
-              href="mailto:hello@example.com"
+              href="mailto:azzhhsna08@gmail.com"
               className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-white hover:bg-white hover:text-black transition-all duration-300"
             >
               azzhhsna08@gmail.com
             </a>
+
             <a
-              href="tel:+1234567890"
+              href="https://wa.me/6286667"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-white hover:bg-white hover:text-black transition-all duration-300"
             >
-              081372769449
+              Chat via WhatsApp
             </a>
           </div>
 
+          {/* Social Links */}
           <div className="flex gap-8 justify-center text-gray-400 mb-16">
             {socialLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-red-600 transition-colors uppercase text-sm tracking-widest"
               >
                 {link.name}
@@ -48,7 +65,7 @@ const Contact = () => {
           </div>
 
           <div className="mt-24 text-xs text-gray-600 uppercase tracking-widest">
-            © 2026 All Rights Reserved
+            © 2026 Azzhsna. All Rights Reserved
           </div>
         </div>
       </div>

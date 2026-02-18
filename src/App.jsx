@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Works from "./components/Works";
-import Services from "./components/Services";
+import Skill from "./components/Skill";
 import Contact from "./components/Contact";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Hero />
       <About />
       <Experience />
-      <Services />
+      <Skill />
       <Works />
       <Contact />
     </div>

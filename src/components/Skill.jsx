@@ -215,7 +215,7 @@ const Services = () => {
           </div>
 
           {/* Bottom CTA */}
-          <div
+          {/* <div
             className="text-center animate-fadeInUp"
             style={{ animationDelay: "0.8s" }}
           >
@@ -238,7 +238,7 @@ const Services = () => {
                 />
               </svg>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
