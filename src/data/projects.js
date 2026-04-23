@@ -22,7 +22,7 @@ import Revolve from "@/assets/revolve.png";
 import Revolve2 from "@/assets/revolve2.png";
 import Revolve3 from "@/assets/revolve3.png";
 import Revolve4 from "@/assets/revolve4.png";
-import Digishop from "@/assets/digishop.png";
+import Digishop from "@/assets/Digishop.png";
 import Digishop2 from "@/assets/digishop2.png";
 import Digishop3 from "@/assets/digishop3.png";
 import Caffeinline from "@/assets/Caffein-line.png";
