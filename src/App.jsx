@@ -1,22 +1,28 @@
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Works from "./components/Works";
-import Skill from "./components/Skill";
-import Contact from "./components/Contact";
+import Home from "./pages/Home";
+import ProjectDetail from "./pages/ProjectDetail";
+
+function AppContent() {
+  const location = useLocation();
+  const isProjectDetail = location.pathname.startsWith("/project/");
+
+  return (
+    <div className="bg-black min-h-screen">
+      {!isProjectDetail && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:slug" element={<ProjectDetail />} />
+      </Routes>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="bg-black">
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Skill />
-      <Works />
-      <Contact />
-    </div>
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 
