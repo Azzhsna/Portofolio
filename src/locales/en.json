@@ -1,0 +1,128 @@
+{
+  "navbar": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "works": "Works",
+    "certificate": "Certificate",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Portofolio",
+    "role": "Web Developer",
+    "view_projects": "View Projects",
+    "scroll": "SCROLL"
+  },
+  "about": {
+    "greeting": "Hello,",
+    "name": "I'm Azzah Husna Almy",
+    "point1_title": "BINUS Graduate",
+    "point1_desc": "Bachelor’s in Computer Science. Strong foundation built through hands-on experience in Full-Stack Development, Front-End, and UI/UX Design across multiple impactful internship roles.",
+    "point2_title": "Design-Driven",
+    "point2_desc": "Actively involved in Creative & Design divisions. Passionate about creating visually stunning, user-centric web applications and collaborating on creative tech solutions.",
+    "point3_title": "Modern Tech Stack & Adaptability",
+    "point3_desc": "Fast learner with strong problem-solving skills, able to work seamlessly in team environments. Proficient in delivering robust applications using modern standards.",
+    "contact_me": "CONTACT ME"
+  },
+  "skills": {
+    "badge": "Expertise",
+    "title": "Skills",
+    "subtitle": "and tools",
+    "description": "For a more detailed overview, please feel free to check the tools that were used on a per-project basis."
+  },
+  "certificate": {
+    "badge": "Achievements",
+    "title": "Certificates",
+    "bg_text": "Sertifikat",
+    "description": "Professional certifications and accomplishments that validate my expertise in frontend development and modern technologies.",
+    "featured_title": "Frontend Developer Specialization",
+    "featured_subtitle": "Verified Professional Achievement",
+    "view_credential": "VIEW CREDENTIAL",
+    "topic": "Topic",
+    "status": "Status",
+    "verified": "Verified"
+  },
+  "works": {
+    "badge": "Featured Projects",
+    "title": "MY",
+    "subtitle": "Works",
+    "description": "Explore my collection of web applications, design systems, and digital experiences.",
+    "view_project": "View Project →"
+  },
+  "experience": {
+    "badge": "My Journey",
+    "title": "Experience",
+    "description": "Building digital experiences through continuous learning and hands-on development across various organizations.",
+    "items": [
+      {
+        "role": "FrontEnd Developer",
+        "company": "AirNav Indonesia",
+        "location": "Tangerang",
+        "period": "Nov 2025 - Apr 2026",
+        "type": "Internship",
+        "desc": [
+          "Built a digital platform to improve efficiency and transparency in managing corporate events.",
+          "Collaborated with cross-functional teams (backend, UI/UX, and stakeholders) to deliver scalable and user-friendly solutions."
+        ]
+      },
+      {
+        "role": "UI/UX Designer",
+        "company": "GroPerti",
+        "location": "Jakarta",
+        "period": "Sept 2025 - Dec 2025",
+        "type": "Internship",
+        "desc": [
+          "Designed modern, intuitive user interfaces for a real estate platform.",
+          "Created wireframes, prototypes, and high-fidelity mockups."
+        ]
+      },
+      {
+        "role": "Application Developer",
+        "company": "BINUS University",
+        "location": "Jakarta",
+        "period": "Sept 2023 - Feb 2024",
+        "type": "Internship",
+        "desc": [
+          "Built educational applications and scalable systems for students.",
+          "Optimized database performance and front-end state management."
+        ]
+      },
+      {
+        "role": "Full Stack Developer",
+        "company": "PT. Media Andalan Nusa",
+        "location": "Jakarta",
+        "period": "Feb 2023 - Aug 2023",
+        "type": "Internship",
+        "desc": [
+          "Developed end-to-end web solutions using modern tech stacks.",
+          "Integrated third-party APIs and maintained backend server infrastructure."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "title_let": "LET'S",
+    "title_talk": "TALK",
+    "description": "Have a project in mind or just want to say hi? I'm always open to discussing new opportunities and creative collaborations.",
+    "send_email": "Send Email",
+    "whatsapp": "WhatsApp",
+    "footer": "© 2026 Azzhsna. Crafting Digital Experiences",
+    "location": "Jakarta, ID",
+    "remote": "Open to Remote"
+  },
+  "project_detail": {
+    "back": "Back",
+    "not_found": "Project Not Found",
+    "back_to_home": "Back to Home",
+    "category": "Category",
+    "technologies": "Technologies",
+    "live_preview": "Live Preview",
+    "github": "GitHub",
+    "about_project": "About the project",
+    "role_contribution": "Role & Contribution",
+    "visual_overview": "Visual Overview",
+    "thank_you": "Thank you for exploring.",
+    "back_to_gallery": "Back to Gallery"
+  }
+}

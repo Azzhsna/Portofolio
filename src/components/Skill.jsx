@@ -1,24 +1,26 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Skill = () => {
+  const { t } = useTranslation();
   const skills = [
     { name: "React.js", weight: 4, color: "text-amber-100" },
+    { name: "NestJs", weight: 3, color: "text-orange-400" },
     { name: "Nuxt.js", weight: 3, color: "text-orange-200" },
-    { name: "API Integration", weight: 1, color: "text-stone-500" },
-    { name: "Node.js", weight: 2, color: "text-amber-400/70" },
-    { name: "UI/UX Design (Figma)", weight: 2, color: "text-orange-400" },
+    { name: "UI/UX Design (Figma)", weight: 2, color: "text-orange-200" },
+    { name: "API Integration", weight: 1, color: "text-stone-400" },
     { name: "JavaScript", weight: 5, color: "text-white" },
     { name: "Redux", weight: 2, color: "text-amber-200" },
-    { name: "GIT", weight: 2, color: "text-stone-400" },
-    { name: "Deployment", weight: 1, color: "text-stone-500" },
+    { name: "GIT", weight: 2, color: "text-amber-400" },
+    { name: "Deployment", weight: 1, color: "text-stone-400" },
     { name: "TypeScript", weight: 3, color: "text-amber-300" },
     { name: "HTML/CSS", weight: 2, color: "text-orange-300" },
     { name: "Laravel", weight: 4, color: "text-amber-100" },
-    { name: "docker", weight: 2, color: "text-stone-400" },
+    { name: "docker", weight: 2, color: "text-orange-400" },
     { name: "Tailwind CSS", weight: 3, color: "text-orange-200" },
-    { name: "postgresql", weight: 1, color: "text-stone-500" },
-    { name: "Bootstrap", weight: 2, color: "text-amber-400/60" },
-    { name: "myskill", weight: 1, color: "text-stone-600" },
+    { name: "postgresql", weight: 2, color: "text-amber-400" },
+    { name: "Node.js", weight: 2, color: "text-orange-200" },
+    { name: "Bootstrap", weight: 1, color: "text-stone-400" },
   ];
 
   const getWeightClass = (weight) => {
@@ -49,34 +51,30 @@ const Skill = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60"></div>
 
         {/* Huge Background Text */}
-        <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 flex items-center justify-center opacity-10 select-none">
-          <h2 className="font-serif text-[25vw] font-black text-amber-900/40 leading-none tracking-tighter">
-            SKILLS
+        {/* <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 flex items-center justify-center opacity-10 select-none">
+          <h2 className="font-serif text-[25vw] font-black text-amber-900/40 leading-none tracking-tighter uppercase">
+            {t("skills.title")}
           </h2>
-        </div>
+        </div> */}
 
-        {/* Animated Glows */}
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-amber-950/10 rounded-full blur-[120px] animate-pulse"></div>
-        <div
-          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-orange-950/8 rounded-full blur-[120px] animate-pulse"
-          style={{ animationDelay: "2s" }}
-        ></div>
       </div>
 
-      {/* Decorative Floating Illustration Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Large Decorative Circle / Orbit */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-amber-500/10 rounded-full animate-[spin_20s_linear_infinite] opacity-30"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-orange-500/5 rounded-full animate-[spin_15s_linear_infinite_reverse] opacity-20"></div>
 
         {/* Floating Icons from About.jsx style */}
         <div className="absolute left-[15%] top-1/4 opacity-20 animate-float">
-          <svg viewBox="0 0 128 128" className="w-20 h-20 text-amber-500 fill-current drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]">
+          <svg
+            viewBox="0 0 128 128"
+            className="w-20 h-20 text-amber-500 fill-current drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]"
+          >
             <path d="M64 24.3c-15.4 0-25 10-28 25 15.4-15 25-10 28 5 3 15 12.6 25 28 25 15.4 0 25-10 28-25-15.4 15-25 10-28-5-3-15-12.6-25-28-25zm-28 48c-15.4 0-25 10-28 25 15.4-15 25-10 28 5 3 15 12.6 25 28 25 15.4 0 25-10 28-25-15.4 15-25 10-28-5-3-15-12.6-25-28-25z" />
           </svg>
         </div>
         <div className="absolute right-[10%] bottom-1/4 opacity-20 animate-float-reverse">
-          <svg viewBox="-11.5 -10.23174 23 20.46348" className="w-28 h-28 text-orange-600 drop-shadow-[0_0_15px_rgba(234,88,12,0.5)]">
+          <svg
+            viewBox="-11.5 -10.23174 23 20.46348"
+            className="w-28 h-28 text-orange-600 drop-shadow-[0_0_15px_rgba(234,88,12,0.5)]"
+          >
             <circle cx="0" cy="0" r="2.05" fill="currentColor" />
             <g stroke="currentColor" strokeWidth="1" fill="none">
               <ellipse rx="11" ry="4.2" />
@@ -89,23 +87,24 @@ const Skill = () => {
 
       <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-12">
-
           {/* Left Text Content */}
           <div className="w-full lg:w-5/12 text-center lg:text-left shrink-0 animate-fadeInUp">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6 mx-auto lg:mx-0">
               <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-              <span className="text-amber-400 text-xs uppercase tracking-widest font-bold">Expertise</span>
+              <span className="text-amber-400 text-xs uppercase tracking-widest font-bold">
+                {t("skills.badge")}
+              </span>
             </div>
             <h2 className="font-serif text-5xl md:text-7xl lg:text-7xl font-black mb-8 leading-tight tracking-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-b from-amber-400 via-orange-500 to-red-600">Skills</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-b from-amber-400 via-orange-500 to-red-600">
+                {t("skills.title")}
+              </span>
               <br />
-              <span className="text-white">and tools</span>
+              <span className="text-white">{t("skills.subtitle")}</span>
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-amber-600 to-transparent mb-8 mx-auto lg:mx-0"></div>
             <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-sm mx-auto lg:mx-0">
-              For a more <span className="text-amber-500 font-semibold underline decoration-amber-500/30 underline-offset-4">detailed</span> overview, please feel free
-              to check the tools that were used on
-              a per-project basis.
+              {t("skills.description")}
             </p>
           </div>
 
@@ -115,7 +114,8 @@ const Skill = () => {
               {skills.map((skill, index) => (
                 <span
                   key={index}
-                  className={`inline-block ${getWeightClass(skill.weight)} ${skill.color} hover:text-amber-400 hover:scale-110 transition-all duration-300 cursor-default select-none animate-fadeInUp`}
+                  className={`inline-block ${getWeightClass(skill.weight)} ${skill.color
+                    } hover:text-amber-400 hover:scale-110 transition-all duration-300 cursor-default select-none animate-fadeInUp`}
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   {skill.name}
@@ -123,7 +123,6 @@ const Skill = () => {
               ))}
             </div>
           </div>
-
         </div>
       </div>
 

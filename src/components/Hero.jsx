@@ -1,7 +1,10 @@
 import React from "react";
 import porto from "@/assets/porto.png";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   const scrollToWorks = () => {
     const element = document.getElementById("works");
     if (element) {
@@ -47,7 +50,7 @@ const Hero = () => {
       {/* HUGE "Portfolio" Text Background */}
       <div className="absolute top-0 left-0 right-0 flex items-start justify-center pt-10 md:pt-10 lg:pt-20 overflow-hidden pointer-events-none">
         <h1 className="font-serif text-[18vw] sm:text-[15vw] md:text-[14vw] lg:text-[16vw] font-black text-stone-900/60 leading-none tracking-tight select-none whitespace-nowrap">
-          Portofolio
+          {t("hero.title")}
         </h1>
       </div>
 
@@ -71,9 +74,9 @@ const Hero = () => {
                 style={{ animationDelay: "0.3s" }}
               >
                 <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl  lg:pt-7 xl:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-amber-400 via-orange-500 to-red-600 leading-none tracking-tight">
-                  Web
+                   {t("hero.role").split(' ')[0]}
                   <br />
-                  Developer
+                   {t("hero.role").split(' ').slice(1).join(' ')}
                 </h2>
               </div>
 
@@ -133,7 +136,7 @@ const Hero = () => {
                   onClick={scrollToWorks}
                   className="group px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-amber-700 to-orange-700 text-white rounded-full text-sm sm:text-base font-semibold hover:shadow-lg hover:shadow-orange-600/40 transition-all duration-300 hover:scale-105 flex items-center gap-2"
                 >
-                  <span>View Projects</span>
+                  <span>{t("hero.view_projects")}</span>
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -150,14 +153,14 @@ const Hero = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 animate-bounce">
         <div className="flex flex-col items-center gap-2 text-gray-400">
-          <span className="text-xs tracking-widest">SCROLL</span>
+          <span className="text-xs tracking-widest">{t("hero.scroll")}</span>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(30px); }
           to { opacity: 1; transform: translateY(0); }

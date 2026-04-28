@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { projectData } from "../data/projects";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
   const project = projectData.find((p) => p.slug === slug);
+  const currentLang = i18n.language || 'en';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,11 +29,19 @@ const ProjectDetail = () => {
   if (!project) {
     return (
       <div className="min-h-screen text-white flex flex-col items-center justify-center p-6" style={{ background: "#000000" }}>
-        <h1 className="font-serif text-4xl mb-4">Project Not Found</h1>
-        <Link to="/" className="text-amber-500 hover:underline">Back to Home</Link>
+        <h1 className="font-serif text-4xl mb-4">{t("project_detail.not_found")}</h1>
+        <Link to="/" className="text-amber-500 hover:underline">{t("project_detail.back_to_home")}</Link>
       </div>
     );
   }
+
+  // Helper for translated fields
+  const getField = (field) => {
+    if (typeof field === 'object' && field !== null) {
+      return field[currentLang] || field.en;
+    }
+    return field;
+  };
 
   return (
     <div className="min-h-screen text-stone-200 selection:bg-amber-900/40 overflow-x-hidden font-sans" style={{ background: "#000000" }}>
@@ -82,7 +93,7 @@ const ProjectDetail = () => {
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
              <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Back
+          {t("project_detail.back")}
         </button>
       </nav>
 
@@ -92,7 +103,7 @@ const ProjectDetail = () => {
         <header className="mb-16">
           <div className="flex items-center gap-4 mb-4">
              <div className="h-px w-12 bg-amber-500/30"></div>
-             <span className="text-[10px] uppercase tracking-[5px] text-amber-500/70 font-semibold">{project.subtitle}</span>
+             <span className="text-[10px] uppercase tracking-[5px] text-amber-500/70 font-semibold">{getField(project.subtitle)}</span>
           </div>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] tracking-tight">
             {project.title}
@@ -115,11 +126,11 @@ const ProjectDetail = () => {
           <div className="lg:col-span-12">
              <div className="flex flex-col md:flex-row gap-8 md:items-center justify-between border-b border-white/5 pb-12 mb-12">
                 <div>
-                   <h3 className="text-[10px] uppercase tracking-[4px] text-stone-500 font-bold mb-2">Category</h3>
-                   <p className="text-lg font-serif italic text-amber-400">{project.subtitle}</p>
+                   <h3 className="text-[10px] uppercase tracking-[4px] text-stone-500 font-bold mb-2">{t("project_detail.category")}</h3>
+                   <p className="text-lg font-serif italic text-amber-400">{getField(project.subtitle)}</p>
                 </div>
                 <div>
-                   <h3 className="text-[10px] uppercase tracking-[4px] text-stone-500 font-bold mb-2">Technologies</h3>
+                   <h3 className="text-[10px] uppercase tracking-[4px] text-stone-500 font-bold mb-2">{t("project_detail.technologies")}</h3>
                    <div className="flex flex-wrap gap-2">
                       {project.tech.map((t) => (
                         <span key={t} className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-stone-300">{t}</span>
@@ -129,12 +140,12 @@ const ProjectDetail = () => {
                 <div className="flex gap-4">
                   {project.link !== "#" && (
                     <a href={project.link} target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full bg-amber-600 text-black text-[10px] uppercase tracking-[2px] font-black hover:bg-amber-500 transition-all">
-                      Live Preview
+                      {t("project_detail.live_preview")}
                     </a>
                   )}
                   {project.github !== "#" && (
                     <a href={project.github} target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full border border-white/10 text-white text-[10px] uppercase tracking-[2px] font-black hover:bg-white/5 transition-all">
-                      GitHub
+                      {t("project_detail.github")}
                     </a>
                   )}
                 </div>
@@ -143,17 +154,17 @@ const ProjectDetail = () => {
 
           {/* Description */}
           <div className="lg:col-span-7">
-             <h3 className="font-serif text-3xl md:text-4xl text-white mb-6">About the project</h3>
-             <p className="text-stone-400 text-lg leading-relaxed font-light">
-               {project.longDesc}
+             <h3 className="font-serif text-3xl md:text-4xl text-white mb-6">{t("project_detail.about_project")}</h3>
+             <p className="text-stone-400 text-lg leading-relaxed font-light whitespace-pre-line">
+               {getField(project.longDesc)}
              </p>
           </div>
 
           {/* Features */}
           <div className="lg:col-span-5">
-             <h3 className="text-[10px] uppercase tracking-[5px] text-amber-500 font-bold mb-8">Role & Contribution</h3>
+             <h3 className="text-[10px] uppercase tracking-[5px] text-amber-500 font-bold mb-8">{t("project_detail.role_contribution")}</h3>
              <ul className="space-y-4">
-                {project.features.map((f, i) => (
+                {getField(project.features).map((f, i) => (
                   <li key={i} className="flex gap-4 items-start text-stone-300 text-sm">
                     <span className="text-amber-500 mt-1">✦</span>
                     {f}
@@ -165,7 +176,7 @@ const ProjectDetail = () => {
 
         {/* Gallery */}
         <div className="space-y-12">
-           <h3 className="font-serif text-3xl text-white text-center mb-12 italic">Visual Overview</h3>
+           <h3 className="font-serif text-3xl text-white text-center mb-12 italic">{t("project_detail.visual_overview")}</h3>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               {project.images.map((img, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden border border-white/5 shadow-xl transition-transform duration-700 hover:scale-[1.02]">
@@ -178,13 +189,13 @@ const ProjectDetail = () => {
         {/* Footer simple */}
         <footer className="mt-40 pt-20 border-t border-white/5 flex flex-col items-center gap-8">
            <div className="text-center font-serif text-2xl italic text-stone-500 opacity-50">
-             Thank you for exploring.
+             {t("project_detail.thank_you")}
            </div>
            <button 
              onClick={handleBack}
              className="px-10 py-4 rounded-full border border-amber-500/20 text-amber-500 text-[10px] uppercase tracking-[5px] font-black hover:bg-amber-500 hover:text-black transition-all"
            >
-             Back to Gallery
+             {t("project_detail.back_to_gallery")}
            </button>
         </footer>
       </main>

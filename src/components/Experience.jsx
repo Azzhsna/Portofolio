@@ -1,56 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Experience = () => {
-  const experiences = [
-    {
-      role: "FrontEnd Developer",
-      company: "AirNav Indonesia",
-      location: "Tangerang",
-      period: "Nov 2025 - Apr 2026",
-      type: "Internship",
-      description: [
-        "Built a digital platform to improve efficiency and transparency in managing corporate events.",
-        "Collaborated with cross-functional teams (backend, UI/UX, and stakeholders) to deliver scalable and user-friendly solutions."
-      ],
-      icon: "🚀"
-    },
-    {
-      role: "UI/UX Designer",
-      company: "GroPerti",
-      location: "Jakarta",
-      period: "Sept 2025 - Des 2025",
-      type: "Internship",
-      description: [
-        "Designed modern, intuitive user interfaces for a real estate platform.",
-        "Created wireframes, prototypes, and high-fidelity mockups.",
-      ],
-      icon: "🎨"
-    },
-    {
-      role: "Application Developer",
-      company: "BINUS University",
-      location: "Jakarta",
-      period: "Sept 2023 - Feb 2024",
-      type: "Internship",
-      description: [
-        "Built educational applications and scalable systems for students.",
-        "Optimized database performance and front-end state management."
-      ],
-      icon: "💻"
-    },
-    {
-      role: "Full Stack Developer",
-      company: "PT. Media Andalan Nusa",
-      location: "Jakarta",
-      period: "Feb 2023 - Aug 2023",
-      type: "Internship",
-      description: [
-        "Developed end-to-end web solutions using modern tech stacks.",
-        "Integrated third-party APIs and maintained backend server infrastructure."
-      ],
-      icon: "🌐"
-    },
-  ];
+  const { t } = useTranslation();
+  const experiences = t("experience.items", { returnObjects: true });
 
   return (
     <section
@@ -59,10 +12,10 @@ const Experience = () => {
     >
       {/* Background with color in the middle */}
       <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0" 
-          style={{ 
-            background: "linear-gradient(180deg, #000000 0%, #0d0805 15%, #1c1209 40%, #2a1507 60%, #1c1209 80%, #0d0805 90%, #000000 100%)" 
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(180deg, #000000 0%, #0d0805 15%, #1c1209 40%, #2a1507 60%, #1c1209 80%, #0d0805 90%, #000000 100%)"
           }}
         ></div>
         {/* Subtle maroon glow in center */}
@@ -92,19 +45,19 @@ const Experience = () => {
             <div className="lg:sticky lg:top-32 pt-4">
               <div className="text-left mb-12">
                 <p className="text-amber-400 text-sm md:text-base uppercase tracking-widest mb-4 font-semibold animate-fadeInUp">
-                  My Journey
+                  {t("experience.badge")}
                 </p>
                 <h2
                   className="font-serif text-5xl md:text-7xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-amber-400 via-orange-500 to-red-600 mb-6 animate-fadeInUp"
                   style={{ animationDelay: "0.1s" }}
                 >
-                  Experience
+                  {t("experience.title")}
                 </h2>
                 <p
                   className="text-gray-400 text-base md:text-lg max-w-md animate-fadeInUp"
                   style={{ animationDelay: "0.2s" }}
                 >
-                  Building digital experiences through continuous learning and hands-on development across various organizations.
+                  {t("experience.description")}
                 </p>
               </div>
 
@@ -148,7 +101,7 @@ const Experience = () => {
             <div className="absolute left-6 md:left-10 top-10 bottom-10 w-0.5 bg-gradient-to-b from-amber-600/10 via-orange-500/30 to-transparent rounded-full hidden sm:block"></div>
 
             <div className="space-y-10">
-              {experiences.map((exp, index) => (
+              {experiences && experiences.map((exp, index) => (
                 <div
                   key={index}
                   className="relative pl-0 sm:pl-24 md:pl-28 animate-fadeInUp group"
@@ -167,7 +120,7 @@ const Experience = () => {
                       <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-5 border-b border-white/5 pb-5">
                         <div>
                           <div className="flex items-center gap-3 mb-2">
-                            <span className="text-3xl drop-shadow-md">{exp.icon}</span>
+                            {/* <span className="text-3xl drop-shadow-md">{exp.icon || "✨"}</span> */}
                             <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-amber-400 group-hover:to-orange-500 transition-all duration-300">
                               {exp.role}
                             </h3>
@@ -204,17 +157,12 @@ const Experience = () => {
 
                       {/* Interactive Bullet Point Description */}
                       <ul className="space-y-3 ml-1">
-                        {Array.isArray(exp.description) ? exp.description.map((item, i) => (
+                        {exp.desc && exp.desc.map((item, i) => (
                           <li key={i} className="flex items-start gap-3 text-gray-300 text-base leading-relaxed group/item hover:text-white transition-colors duration-300">
                             <span className="mt-2 w-1.5 h-1.5 rounded-full bg-amber-500/60 flex-shrink-0 group-hover/item:scale-150 group-hover/item:bg-amber-400 transition-all duration-300"></span>
                             <span>{item}</span>
                           </li>
-                        )) : (
-                          <li className="flex items-start gap-3 text-gray-300 text-base leading-relaxed group/item hover:text-white transition-colors duration-300">
-                            <span className="mt-2 w-1.5 h-1.5 rounded-full bg-amber-500/60 flex-shrink-0 group-hover/item:scale-150 group-hover/item:bg-amber-400 transition-all duration-300"></span>
-                            <span>{exp.description}</span>
-                          </li>
-                        )}
+                        ))}
                       </ul>
                     </div>
                   </div>

@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const socialLinks = [
     {
       name: "LinkedIn",
@@ -73,24 +75,24 @@ const Contact = () => {
           {/* Left Column: Text & Links */}
           <div className="flex flex-col text-left">
             <p className="text-amber-500 font-bold uppercase tracking-[0.3em] text-sm mb-6 animate-fadeInUp">
-              Get In Touch
+              {t("contact.badge")}
             </p>
             <h2 className="font-serif text-6xl md:text-8xl lg:text-9xl font-black text-white leading-tight mb-10 tracking-tighter animate-fadeInUp" style={{ animationDelay: "0.1s" }}>
-              LET'S <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-600">TALK</span>
+              {t("contact.title_let")} <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-600">{t("contact.title_talk")}</span>
             </h2>
             
             <p className="text-lg md:text-xl text-stone-400 font-light leading-relaxed mb-12 max-w-lg animate-fadeInUp" style={{ animationDelay: "0.2s" }}>
-              Have a project in mind or just want to say hi? I'm always open to discussing new opportunities and creative collaborations.
+              {t("contact.description")}
             </p>
 
             {/* Main Contact Buttons */}
             <div className="flex flex-col sm:flex-row gap-5 mb-16 animate-fadeInUp" style={{ animationDelay: "0.3s" }}>
               <a
                 href="mailto:azzhhsna08@gmail.com"
-                className="group relative px-8 py-5 bg-white text-black rounded-2xl font-black text-xs uppercase tracking-[0.2em] overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95"
+                className="group relative px-8 py-5 bg-white text-black rounded-2xl font-black text-xs uppercase tracking-[0.2em] overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 text-center"
               >
-                <span className="relative z-10">Send Email</span>
+                <span className="relative z-10">{t("contact.send_email")}</span>
                 <div className="absolute inset-0 bg-amber-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
               </a>
 
@@ -100,7 +102,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="group px-8 py-5 bg-stone-900 border border-white/10 text-white rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-stone-800 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-3"
               >
-                <span>WhatsApp</span>
+                <span>{t("contact.whatsapp")}</span>
                 <svg className="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M1.101 24l1.6-5.823c-1.129-1.958-1.725-4.185-1.723-6.464 0.005-7.112 5.795-12.899 12.91-12.899 3.444 0.001 6.682 1.342 9.117 3.778 2.435 2.437 3.775 5.676 3.773 9.122-0.005 7.113-5.797 12.901-12.912 12.901-2.235-0.001-4.425-0.58-6.368-1.674l-6.4 1.679zm6.076-4.413c1.589.949 3.12 1.441 5.074 1.441 6.071 0 11.011-4.94 11.016-11.011 0.002-3.003-1.168-5.827-3.295-7.954-2.127-2.127-4.954-3.298-7.958-3.3-6.076 0-11.016 4.942-11.019 11.013 0 2.03.541 3.232 1.542 4.939l-1.012 3.693 3.752-.981z" />
                 </svg>
@@ -175,10 +177,10 @@ const Contact = () => {
 
         {/* Footer Credits */}
         <div className="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-stone-600 text-[10px] uppercase tracking-[0.3em] font-medium">
-          <div>© 2026 Azzhsna. Crafting Digital Experiences</div>
+          <div>{t("contact.footer")}</div>
           <div className="flex gap-8">
-            <span className="hover:text-amber-500 transition-colors cursor-pointer">Jakarta, ID</span>
-            <span className="hover:text-amber-500 transition-colors cursor-pointer">Open to Remote</span>
+            <span className="hover:text-amber-500 transition-colors cursor-pointer">{t("contact.location")}</span>
+            <span className="hover:text-amber-500 transition-colors cursor-pointer">{t("contact.remote")}</span>
           </div>
         </div>
       </div>

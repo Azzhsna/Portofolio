@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
+import { nodesToString, useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -96,8 +98,8 @@ const About = () => {
       </div>
 
       {/* Main Content - Centered */}
-      <div className="relative z-10 w-full  md:px-12 lg:px-20 py-20">
-        <div className=" font-serif max-w-4xl mx-auto text-center">
+      <div className="relative z-10 w-full md:px-12 lg:px-20 py-20">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Title */}
           <h2
             className={`font-serif text-3xl md:text-5xl lg:text-4xl xl:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-red-600 via-yellow-600 to-red-800 leading-tight tracking-tight mb-8 ${isVisible
@@ -106,8 +108,8 @@ const About = () => {
               }`}
             style={{ transitionDelay: "0.3s" }}
           >
-            Hello, <br></br>
-            I'm Azzah Husna Almy
+            {t("about.greeting")} <br></br>
+            {t("about.name")}
           </h2>
 
           {/* Description - Bulleted & Easy to read */}
@@ -124,11 +126,11 @@ const About = () => {
               <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors duration-300 relative group backdrop-blur-sm shadow-xl">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-orange-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-500"></div>
                 <div className="relative">
-                  <h3 className="text-xl font-bold text-amber-400 mb-2 flex items-center gap-3">
-                    <span className="text-2xl drop-shadow-lg">🎓</span> BINUS Graduate
+                  <h3 className="font-serif text-xl font-bold text-amber-400 mb-2 flex items-center gap-3">
+                    <span className="text-2xl drop-shadow-lg">🎓</span> {t("about.point1_title")}
                   </h3>
                   <p className="text-gray-300/90 text-sm md:text-base leading-relaxed">
-                    Bachelor’s in Computer Science. Strong foundation built through hands-on experience in <strong>Full-Stack Development</strong>, <strong>Front-End</strong>, and <strong>UI/UX Design</strong> across multiple impactful internship roles.
+                    {t("about.point1_desc")}
                   </p>
                 </div>
               </div>
@@ -137,11 +139,11 @@ const About = () => {
               <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors duration-300 relative group backdrop-blur-sm shadow-xl">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 to-red-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-500"></div>
                 <div className="relative">
-                  <h3 className="text-xl font-bold text-orange-400 mb-2 flex items-center gap-3">
-                    <span className="text-2xl drop-shadow-lg">🎨</span> Design-Driven
+                  <h3 className="font-serif text-xl font-bold text-orange-400 mb-2 flex items-center gap-3">
+                    <span className="text-2xl drop-shadow-lg">🎨</span> {t("about.point2_title")}
                   </h3>
                   <p className="text-gray-300/90 text-sm md:text-base leading-relaxed">
-                    Actively involved in Creative & Design divisions. Passionate about creating visually stunning, user-centric web applications and collaborating on creative tech solutions.
+                    {t("about.point2_desc")}
                   </p>
                 </div>
               </div>
@@ -150,14 +152,14 @@ const About = () => {
               <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors duration-300 relative group md:col-span-2 backdrop-blur-sm shadow-xl">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-400 to-red-600 rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-500"></div>
                 <div className="relative">
-                  <h3 className="text-xl font-bold text-red-400 mb-4 flex items-center gap-3 justify-start">
-                    <span className="text-2xl drop-shadow-lg">💻</span> Modern Tech Stack & Adaptability
+                  <h3 className="font-serif text-xl font-bold text-red-400 mb-4 flex items-center gap-3 justify-start">
+                    <span className="text-2xl drop-shadow-lg">💻</span> {t("about.point3_title")}
                   </h3>
                   <p className="text-gray-300/90 text-sm md:text-base leading-relaxed mb-5">
-                    Fast learner with strong problem-solving skills, able to work seamlessly in team environments. Proficient in delivering robust applications using modern standards.
+                    {t("about.point3_desc")}
                   </p>
                   <div className="flex flex-wrap items-center justify-start gap-2.5">
-                    {['React.js', 'Nuxt.js', 'TypeScript', 'Tailwind CSS', 'JavaScript', 'HTML/CSS', 'PHP'].map((tech) => (
+                    {['React.js', 'Nuxt.js', 'Nest.Js', 'TypeScript', 'PostgreSQL', 'MongoDB', 'Tailwind CSS', 'JavaScript', 'HTML/CSS', 'PHP'].map((tech) => (
                       <span key={tech} className="px-4 py-1.5 bg-red-950/40 text-red-100 border border-red-500/30 rounded-full text-xs md:text-sm font-semibold tracking-wide hover:scale-105 transition-transform hover:bg-red-900/60 shadow-lg cursor-default">
                         {tech}
                       </span>
@@ -186,7 +188,7 @@ const About = () => {
               }
               className="px-10 py-4 bg-gradient-to-r from-red-600 via-black-600 to-orange-500 text-white rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105 relative overflow-hidden group"
             >
-              CONTACT ME
+              {t("about.contact_me")}
             </button>
           </div>
 

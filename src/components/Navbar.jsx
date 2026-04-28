@@ -1,19 +1,26 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
-
-const menuItems = [
-  { label: "About", id: "about" },
-  { label: "Experience", id: "experience" },
-  { label: "Skill", id: "skills" },
-  { label: "Works", id: "works" },
-  { label: "Contact", id: "contact" },
-];
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+
+  const menuItems = [
+    { label: t("navbar.about"), id: "about" },
+    { label: t("navbar.experience"), id: "experience" },
+    { label: t("navbar.skills"), id: "skills" },
+    { label: t("navbar.works"), id: "works" },
+    { label: t("navbar.certificate"), id: "certificate" },
+    { label: t("navbar.contact"), id: "contact" },
+  ];
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,12 +43,11 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [i18n.language]);
 
   const scrollToSection = (id) => {
     if (location.pathname !== "/") {
       navigate("/");
-      // Wait for navigation to complete before scrolling
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
@@ -56,9 +62,7 @@ const Navbar = () => {
     const element = document.getElementById(id);
     if (element) {
       const yOffset = -80;
-      const y =
-        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
@@ -73,7 +77,7 @@ const Navbar = () => {
 
         </Link>
 
-        <div className="hidden md:flex gap-12 text-sm uppercase tracking-widest">
+        <div className="hidden md:flex items-center gap-12 text-sm uppercase tracking-widest">
           {menuItems.map((item) => (
             <button
               key={item.id}
@@ -87,7 +91,6 @@ const Navbar = () => {
             >
               {item.label}
 
-              {/* Animated Underline */}
               <span
                 className={`absolute -bottom-2 left-0 h-[2px] bg-yellow-400 transition-all duration-300
                   ${active === item.id && location.pathname === "/"
@@ -98,6 +101,25 @@ const Navbar = () => {
               />
             </button>
           ))}
+
+          {/* Language Switcher */}
+          <div className="flex items-center gap-4 ml-4 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full backdrop-blur-md">
+            <button
+              onClick={() => changeLanguage("en")}
+              className={`text-xs font-bold transition-all duration-300 ${i18n.language === "en" ? "text-amber-400" : "text-white/40 hover:text-white/70"
+                }`}
+            >
+              EN
+            </button>
+            <div className="w-[1px] h-3 bg-white/10"></div>
+            <button
+              onClick={() => changeLanguage("id")}
+              className={`text-xs font-bold transition-all duration-300 ${i18n.language === "id" ? "text-amber-400" : "text-white/40 hover:text-white/70"
+                }`}
+            >
+              ID
+            </button>
+          </div>
         </div>
       </div>
     </nav>

@@ -1,0 +1,128 @@
+{
+  "navbar": {
+    "about": "Tentang",
+    "experience": "Pengalaman",
+    "skills": "Keahlian",
+    "works": "Karya",
+    "certificate": "Sertifikat",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "title": "Portofolio",
+    "role": "Pengembang Web",
+    "view_projects": "Lihat Proyek",
+    "scroll": "GULIR"
+  },
+  "about": {
+    "greeting": "Halo,",
+    "name": "Saya Azzah Husna Almy",
+    "point1_title": "Lulusan BINUS",
+    "point1_desc": "Sarjana Ilmu Komputer. Fondasi kuat yang dibangun melalui pengalaman praktis dalam Full-Stack Development, Front-End, dan UI/UX Design di berbagai peran magang yang berdampak.",
+    "point2_title": "Berbasis Desain",
+    "point2_desc": "Terlibat aktif dalam divisi Kreatif & Desain. Bersemangat dalam menciptakan aplikasi web yang memukau secara visual, berpusat pada pengguna, dan berkolaborasi dalam solusi teknologi kreatif.",
+    "point3_title": "Teknologi Modern & Adaptabilitas",
+    "point3_desc": "Pembelajar cepat dengan keterampilan pemecahan masalah yang kuat, mampu bekerja secara mulus dalam lingkungan tim. Mahir dalam menghadirkan aplikasi yang kokoh menggunakan standar modern.",
+    "contact_me": "HUBUNGI SAYA"
+  },
+  "skills": {
+    "badge": "Keahlian",
+    "title": "Keterampilan",
+    "subtitle": "dan alat",
+    "description": "Untuk gambaran yang lebih rinci, silakan periksa alat yang digunakan pada setiap proyek."
+  },
+  "certificate": {
+    "badge": "Pencapaian",
+    "title": "Sertifikat",
+    "bg_text": "Sertifikat",
+    "description": "Sertifikasi dan pencapaian profesional yang memvalidasi keahlian saya dalam pengembangan frontend dan teknologi modern.",
+    "featured_title": "Spesialisasi Pengembang Frontend",
+    "featured_subtitle": "Pencapaian Profesional Terverifikasi",
+    "view_credential": "LIHAT KREDENSIAL",
+    "topic": "Topik",
+    "status": "Status",
+    "verified": "Terverifikasi"
+  },
+  "works": {
+    "badge": "Proyek Unggulan",
+    "title": "KARYA",
+    "subtitle": "Saya",
+    "description": "Jelajahi koleksi aplikasi web, sistem desain, dan pengalaman digital saya.",
+    "view_project": "Lihat Proyek →"
+  },
+  "experience": {
+    "badge": "Perjalanan Saya",
+    "title": "Pengalaman",
+    "description": "Membangun pengalaman digital melalui pembelajaran berkelanjutan dan pengembangan langsung di berbagai organisasi.",
+    "items": [
+      {
+        "role": "FrontEnd Developer",
+        "company": "AirNav Indonesia",
+        "location": "Tangerang",
+        "period": "Nov 2025 - Apr 2026",
+        "type": "Magang",
+        "desc": [
+          "Membangun platform digital untuk meningkatkan efisiensi dan transparansi dalam mengelola acara perusahaan.",
+          "Berkolaborasi dengan tim lintas fungsi (backend, UI/UX, dan pemangku kepentingan) untuk menghadirkan solusi yang skalabel dan ramah pengguna."
+        ]
+      },
+      {
+        "role": "UI/UX Designer",
+        "company": "GroPerti",
+        "location": "Jakarta",
+        "period": "Sept 2025 - Des 2025",
+        "type": "Magang",
+        "desc": [
+          "Merancang antarmuka pengguna yang modern dan intuitif untuk platform real estat.",
+          "Membuat wireframe, prototipe, dan mockup dengan fidelitas tinggi."
+        ]
+      },
+      {
+        "role": "Application Developer",
+        "company": "Universitas BINUS",
+        "location": "Jakarta",
+        "period": "Sept 2023 - Feb 2024",
+        "type": "Magang",
+        "desc": [
+          "Membangun aplikasi pendidikan dan sistem yang skalabel untuk mahasiswa.",
+          "Mengoptimalkan kinerja basis data dan manajemen status front-end."
+        ]
+      },
+      {
+        "role": "Full Stack Developer",
+        "company": "PT. Media Andalan Nusa",
+        "location": "Jakarta",
+        "period": "Feb 2023 - Agt 2023",
+        "type": "Magang",
+        "desc": [
+          "Mengembangkan solusi web ujung-ke-ujung menggunakan tumpukan teknologi modern.",
+          "Mengintegrasikan API pihak ketiga dan memelihara infrastruktur server backend."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Hubungi Saya",
+    "title_let": "MARI",
+    "title_talk": "BICARA",
+    "description": "Punya proyek atau sekadar ingin menyapa? Saya selalu terbuka untuk mendiskusikan peluang baru dan kolaborasi kreatif.",
+    "send_email": "Kirim Email",
+    "whatsapp": "WhatsApp",
+    "footer": "© 2026 Azzhsna. Membangun Pengalaman Digital",
+    "location": "Jakarta, ID",
+    "remote": "Terbuka untuk Remote"
+  },
+  "project_detail": {
+    "back": "Kembali",
+    "not_found": "Proyek Tidak Ditemukan",
+    "back_to_home": "Kembali ke Beranda",
+    "category": "Kategori",
+    "technologies": "Teknologi",
+    "live_preview": "Pratinjau Langsung",
+    "github": "GitHub",
+    "about_project": "Tentang Proyek",
+    "role_contribution": "Peran & Kontribusi",
+    "visual_overview": "Tinjauan Visual",
+    "thank_you": "Terima kasih telah menjelajah.",
+    "back_to_gallery": "Kembali ke Galeri"
+  }
+}

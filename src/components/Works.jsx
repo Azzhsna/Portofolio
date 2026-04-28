@@ -1,12 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { projectData } from "../data/projects";
+import { useTranslation } from "react-i18next";
 
 // ── Project Card ─────────────────────────────────────────────────────────
 const ProjectCard = ({ project, index }) => {
   const ref = useRef(null);
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language || 'en';
 
   useEffect(() => {
     const el = ref.current;
@@ -91,7 +94,7 @@ const ProjectCard = ({ project, index }) => {
                 border: "1px solid #fed7aa",
               }}
             >
-              {project.subtitle}
+              {typeof project.subtitle === 'object' ? project.subtitle[currentLang] || project.subtitle.en : project.subtitle}
             </span>
           </div>
           {/* Title */}
@@ -105,7 +108,7 @@ const ProjectCard = ({ project, index }) => {
             className="text-sm leading-relaxed flex-1 mb-4"
             style={{ color: "#6b4c2a" }}
           >
-            {project.desc}
+            {typeof project.desc === 'object' ? project.desc[currentLang] || project.desc.en : project.desc}
           </p>
 
           {/* Footer */}
@@ -135,7 +138,7 @@ const ProjectCard = ({ project, index }) => {
                 e.currentTarget.style.borderColor = "#fed7aa";
               }}
             >
-              View Project →
+              {t("works.view_project")}
             </span>
           </div>
         </div>
@@ -148,6 +151,7 @@ const ProjectCard = ({ project, index }) => {
 const WorksHeader = () => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const el = ref.current;
@@ -176,7 +180,7 @@ const WorksHeader = () => {
           transition: "opacity 0.6s ease, transform 0.6s ease",
         }}
       >
-        Featured Projects
+        {t("works.badge")}
       </p>
       <h2
         className="font-serif text-5xl md:text-7xl lg:text-8xl font-black mb-6"
@@ -195,9 +199,9 @@ const WorksHeader = () => {
             backgroundClip: "text",
           }}
         >
-          MY
+          {t("works.title")}
         </span>{" "}
-        <span className="text-white">Works</span>
+        <span className="text-white">{t("works.subtitle")}</span>
       </h2>
 
       {/* Divider */}
@@ -237,8 +241,7 @@ const WorksHeader = () => {
           transition: "opacity 0.6s ease 0.35s, transform 0.6s ease 0.35s",
         }}
       >
-        Explore my collection of web applications, design systems, and digital
-        experiences.
+        {t("works.description")}
       </p>
     </div>
   );
