@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ProjectDetail from "./pages/ProjectDetail";
+import ScrollToHash from "./components/ScrollToHash";
 
 function AppContent() {
   const location = useLocation();
@@ -9,6 +10,7 @@ function AppContent() {
 
   return (
     <div className="bg-black min-h-screen">
+      <ScrollToHash />
       {!isProjectDetail && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />

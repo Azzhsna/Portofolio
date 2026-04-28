@@ -57,7 +57,7 @@ const About = () => {
       >
         {/* React Icon Floating */}
         <div className="relative w-32 h-32 lg:w-48 lg:h-48 -mt-20 ml-10 transform rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500">
-          <svg viewBox="-11.5 -10.23174 23 20.46348" className="w-full h-full text-[#61DAFB] animate-[spin_10s_linear_infinite]" style={{ filter: "drop-shadow(0px 0px 15px rgba(97,218,251,0.6))" }}>
+          <svg viewBox="-11.5 -10.23174 23 20.46348" className="w-full h-full text-[#61DAFB] animate-[spin_15s_linear_infinite]" style={{ filter: "drop-shadow(0 0 20px rgba(97,218,251,0.6))" }}>
             <circle cx="0" cy="0" r="2.05" fill="currentColor" />
             <g stroke="currentColor" strokeWidth="1" fill="none">
               <ellipse rx="11" ry="4.2" />
@@ -67,11 +67,10 @@ const About = () => {
           </svg>
         </div>
 
-        {/* Nuxt Icon Floating */}
+        {/* NestJS Icon Floating */}
         <div className="relative w-28 h-28 lg:w-36 lg:h-36 mt-12 ml-20 transform -rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500">
-          <svg viewBox="0 0 128 128" className="w-full h-full object-contain animate-pulse" style={{ filter: "drop-shadow(0px 0px 15px rgba(0,220,130,0.6))" }}>
-            <path fill="#00DC82" d="M37.3 103.5l-2-3-22-38.6A11.7 11.7 0 0113 56l16-27.4a11.5 11.5 0 0119.5-1.2l3 4.2 3.8-5a11.9 11.9 0 0119-1L91 46.8l1.3-1.6a11.7 11.7 0 0119.3-1L128 72v1.5a11.6 11.6 0 01-1.3 6h-23l-3 4-23.7 32a11.7 11.7 0 01-19.3 1L40 93l-2.6 10.6z" />
-            <path fill="#FFF" d="M83.6 105.7L60 73.8l-15.5 21a5 5 0 01-8-6l20.4-28h2.3l27 36a5 5 0 11-8 5v-1.1zm24-8.8l17-24a5 5 0 00-8-6l-14 20h2zm-84 0l-12-21a5 5 0 018-5.3l9 16z" />
+          <svg viewBox="0 0 128 128" className="w-full h-full object-contain animate-pulse" style={{ filter: "drop-shadow(0 0 20px rgba(224,35,78,0.5))" }}>
+            <path fill="#E0234E" d="M110.7 28.7L66.7 5.2c-1.7-.9-3.7-.9-5.4 0L17.3 28.7c-1.7.9-2.7 2.6-2.7 4.5v48.6c0 1.9 1 3.6 2.7 4.5l44 23.5c1.7.9 3.7.9 5.4 0l44-23.5c1.7-.9 2.7-2.6 2.7-4.5V33.2c0-1.9-1-3.6-2.7-4.5zM64 103.3L30 85.2V43.5l34 18.1v41.7zm0-49.2L30 36l34-18.1 34 18.1-34 18.1zm34 31.1l-34 18.1V61.6l34-18.1v41.7z" />
           </svg>
         </div>
       </div>
@@ -82,15 +81,15 @@ const About = () => {
           } hidden lg:block z-0`}
       >
         {/* Tailwind Icon Floating */}
-        <div className="relative w-32 h-32 lg:w-48 lg:h-48 -mt-10 mr-10 transform -rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500 z-20">
-          <svg viewBox="0 0 128 128" className="w-full h-full animate-[spin_10s_linear_infinite]" style={{ filter: "drop-shadow(0px 0px 15px rgba(56,189,248,0.6))" }}>
+        <div className="relative w-32 h-32 lg:w-48 lg:h-48 -mt-10 mr-10 transform -rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500">
+          <svg viewBox="0 0 128 128" className="w-full h-full animate-float" style={{ filter: "drop-shadow(0 0 20px rgba(56,189,248,0.6))" }}>
             <path fill="#38BDF8" d="M64 24.3c-15.4 0-25 10-28 25 15.4-15 25-10 28 5 3 15 12.6 25 28 25 15.4 0 25-10 28-25-15.4 15-25 10-28-5-3-15-12.6-25-28-25zm-28 48c-15.4 0-25 10-28 25 15.4-15 25-10 28 5 3 15 12.6 25 28 25 15.4 0 25-10 28-25-15.4 15-25 10-28-5-3-15-12.6-25-28-25z" />
           </svg>
         </div>
 
         {/* JS Icon Floating */}
         <div className="relative w-28 h-28 lg:w-36 lg:h-36 mt-6 mr-20 transform rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500">
-          <svg viewBox="0 0 128 128" className="w-full h-full rounded-2xl animate-pulse" style={{ filter: "drop-shadow(0px 0px 15px rgba(234,179,8,0.6))" }}>
+          <svg viewBox="0 0 128 128" className="w-full h-full rounded-xl animate-pulse" style={{ filter: "drop-shadow(0 0 20px rgba(234,179,8,0.6))" }}>
             <rect width="128" height="128" fill="#F7DF1E" rx="16" />
             <path d="M67.3 96.5c-3-3.2-5-7.7-5.8-12.5h11c.5 2.8 1.6 5.2 3.5 6.8 2 1.6 4.7 2.4 8 2.4 3.8 0 6.6-.8 8.6-2.5 2-1.6 3-4 3-7 0-2.3-.6-4.2-1.8-5.6-1.5-1.7-4.6-3.6-9.4-5.6-6-2.5-10.2-5.4-12.7-8.8-2.6-3.4-3.8-7.7-3.8-13 0-5.8 2-10.4 6-13.8 4-3.4 9.5-5 16.3-5 7 0 12.6 1.6 16.5 4.8 4 3 6.4 7.6 7 13.5h-11.2c-.4-3-1.6-5.2-3.6-6.6-2-1.3-4.8-2-8.5-2-3.3 0-6 .7-7.8 2-1.8 1.4-2.8 3.3-2.8 5.7 0 2 .5 3.6 1.4 4.8 1 1.2 3.8 2.8 8.4 4.7 7 2.8 12 6.2 14.8 9.8 2.8 3.7 4.2 8.4 4.2 14 0 6-2.4 11-7.2 14.5-4.8 3.6-11 5.4-18.7 5.4-8 0-14-1.8-18.4-5.2zm-28-.3c-3-3-5.2-7.6-6.2-13.7h11.2c.5 3 1.8 5.4 3.7 7.2 2 1.8 5 2.7 8.6 2.7 3.5 0 6-.8 7.5-2.2 1.4-1.4 2.2-3.3 2.2-5.5V43h11.8v39.4c0 6.6-2 11.5-6.2 15-4.2 3.5-9.8 5.3-17 5.3-7.5 0-13.2-2-17.5-6z" fill="#000" />
           </svg>
@@ -100,17 +99,25 @@ const About = () => {
       {/* Main Content - Centered */}
       <div className="relative z-10 w-full md:px-12 lg:px-20 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Title */}
-          <h2
-            className={`font-serif text-3xl md:text-5xl lg:text-4xl xl:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-red-600 via-yellow-600 to-red-800 leading-tight tracking-tight mb-8 ${isVisible
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"
-              }`}
+          {/* Title - Enhanced Typography */}
+          <div 
+            className={`mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             style={{ transitionDelay: "0.3s" }}
           >
-            {t("about.greeting")} <br></br>
-            {t("about.name")}
-          </h2>
+            <p className="text-amber-500/80 font-medium tracking-[0.3em] uppercase text-xs mb-4 animate-pulse">
+              {t("about.greeting")}
+            </p>
+            <h2 className="relative inline-block font-serif text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tighter">
+              <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-stone-200 to-stone-500">
+                {t("about.name").split(' ')[0]}
+              </span>{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-br from-amber-400 via-orange-500 to-red-600 drop-shadow-sm">
+                {t("about.name").split(' ').slice(1).join(' ')}
+              </span>
+              {/* Decorative line under the name */}
+              <div className="absolute -bottom-2 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-amber-500/40 to-transparent transform scale-x-100 transition-transform duration-700"></div>
+            </h2>
+          </div>
 
           {/* Description - Bulleted & Easy to read */}
           <div

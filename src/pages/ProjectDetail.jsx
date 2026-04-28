@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { projectData } from "../data/projects";
@@ -9,22 +9,39 @@ const ProjectDetail = () => {
   const { t, i18n } = useTranslation();
   const project = projectData.find((p) => p.slug === slug);
   const currentLang = i18n.language || 'en';
+  
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const handleBack = () => {
-    navigate("/");
-    setTimeout(() => {
-      const element = document.getElementById("works");
-      if (element) {
-        const yOffset = -80;
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
-      }
-    }, 100);
+    navigate("/#works");
   };
+
+  const nextImage = useCallback(() => {
+    if (project) {
+      setSelectedIndex((prev) => (prev + 1) % project.images.length);
+    }
+  }, [project]);
+
+  const prevImage = useCallback(() => {
+    if (project) {
+      setSelectedIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
+    }
+  }, [project]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (selectedIndex === null) return;
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+      if (e.key === "Escape") setSelectedIndex(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedIndex, nextImage, prevImage]);
 
   if (!project) {
     return (
@@ -111,12 +128,26 @@ const ProjectDetail = () => {
         </header>
 
         {/* Hero Image - Not full screen, prominent */}
-        <div className="mb-24 rounded-3xl overflow-hidden shadow-2xl border border-white/5 ring-1 ring-white/10 bg-stone-900">
+        <div 
+          className="relative group cursor-zoom-in mb-24 rounded-3xl overflow-hidden shadow-2xl border border-white/5 ring-1 ring-white/10 bg-stone-900"
+          onClick={() => setSelectedIndex(0)}
+        >
            <img 
              src={project.images[0]} 
-             className="w-full h-auto object-cover max-h-[70vh]" 
+             className="w-full h-auto object-cover max-h-[70vh] transition-transform duration-700 group-hover:scale-[1.03]" 
              alt={project.title} 
            />
+           {/* Zoom Overlay */}
+           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="p-4 rounded-full bg-amber-500/20 backdrop-blur-md border border-amber-500/30 text-amber-500 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                 </svg>
+              </div>
+           </div>
         </div>
 
         {/* Info Grid */}
@@ -165,7 +196,7 @@ const ProjectDetail = () => {
              <h3 className="text-[10px] uppercase tracking-[5px] text-amber-500 font-bold mb-8">{t("project_detail.role_contribution")}</h3>
              <ul className="space-y-4">
                 {getField(project.features).map((f, i) => (
-                  <li key={i} className="flex gap-4 items-start text-stone-300 text-sm">
+                   <li key={i} className="flex gap-4 items-start text-stone-300 text-sm">
                     <span className="text-amber-500 mt-1">✦</span>
                     {f}
                   </li>
@@ -179,8 +210,23 @@ const ProjectDetail = () => {
            <h3 className="font-serif text-3xl text-white text-center mb-12 italic">{t("project_detail.visual_overview")}</h3>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               {project.images.map((img, i) => (
-                <div key={i} className="rounded-2xl overflow-hidden border border-white/5 shadow-xl transition-transform duration-700 hover:scale-[1.02]">
+                <div 
+                  key={i} 
+                  className="relative group cursor-zoom-in rounded-2xl overflow-hidden border border-white/5 shadow-xl transition-all duration-700 hover:scale-[1.02]"
+                  onClick={() => setSelectedIndex(i)}
+                >
                    <img src={img} className="w-full h-auto" alt={`Gallery ${i}`} />
+                   {/* Overlay with Zoom Icon */}
+                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="p-3 rounded-full bg-amber-500/20 backdrop-blur-md border border-amber-500/30 text-amber-500 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            <line x1="11" cy="8" x2="11" y2="14"></line>
+                            <line x1="8" cy="11" x2="14" y2="11"></line>
+                         </svg>
+                      </div>
+                   </div>
                 </div>
               ))}
            </div>
@@ -199,6 +245,53 @@ const ProjectDetail = () => {
            </button>
         </footer>
       </main>
+
+      {/* Lightbox Modal */}
+      {selectedIndex !== null && (
+        <div 
+          className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/95 backdrop-blur-xl transition-all duration-500 animate-in fade-in"
+          onClick={() => setSelectedIndex(null)}
+        >
+          {/* Close button */}
+          <button 
+            className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[1001]"
+            onClick={() => setSelectedIndex(null)}
+          >
+             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+
+          {/* Navigation Prev */}
+          <button 
+            className="absolute left-4 md:left-8 p-3 md:p-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-white/70 hover:text-white z-[1001]"
+            onClick={(e) => { e.stopPropagation(); prevImage(); }}
+          >
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          {/* Image Container */}
+          <div 
+            className="max-w-[90vw] max-h-[85vh] flex flex-col items-center gap-6 animate-in zoom-in duration-300" 
+            onClick={(e) => e.stopPropagation()}
+          >
+             <img 
+               src={project.images[selectedIndex]} 
+               className="w-full h-full object-contain rounded-lg shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/5" 
+               alt="Preview" 
+             />
+             <div className="px-6 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-stone-400 text-[10px] uppercase tracking-[3px] font-bold">
+                {selectedIndex + 1} / {project.images.length}
+             </div>
+          </div>
+
+          {/* Navigation Next */}
+          <button 
+            className="absolute right-4 md:right-8 p-3 md:p-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-white/70 hover:text-white z-[1001]"
+            onClick={(e) => { e.stopPropagation(); nextImage(); }}
+          >
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      )}
 
       {/* Decorative Glow Orbs */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 1 }}>

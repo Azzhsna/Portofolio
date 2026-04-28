@@ -233,9 +233,9 @@ const WorksHeader = () => {
       </div>
 
       <p
-        className="text-sm font-light max-w-md mx-auto leading-relaxed"
+        className="text-base md:text-lg font-light max-w-2xl mx-auto leading-relaxed"
         style={{
-          color: "rgba(255,255,255,0.4)",
+          color: "rgba(255,255,255,0.5)",
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(8px)",
           transition: "opacity 0.6s ease 0.35s, transform 0.6s ease 0.35s",
@@ -355,9 +355,9 @@ const Works = () => {
 
       {/* Bottom fade */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none z-20"
+        className="absolute bottom-0 left-0 right-0 h-48 pointer-events-none z-20"
         style={{
-          background: "linear-gradient(to top, #000000, transparent)",
+          background: "linear-gradient(to top, #000000, rgba(0,0,0,0.8) 50%, transparent)",
         }}
       />
       {/* Top fade */}

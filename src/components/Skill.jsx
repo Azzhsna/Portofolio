@@ -5,22 +5,29 @@ const Skill = () => {
   const { t } = useTranslation();
   const skills = [
     { name: "React.js", weight: 4, color: "text-amber-100" },
-    { name: "NestJs", weight: 3, color: "text-orange-400" },
-    { name: "Nuxt.js", weight: 3, color: "text-orange-200" },
+    { name: "Nest.Js", weight: 2, color: "text-orange-400" },
+    { name: "Nuxt.js", weight: 4, color: "text-orange-200" },
     { name: "UI/UX Design (Figma)", weight: 2, color: "text-orange-200" },
-    { name: "API Integration", weight: 1, color: "text-stone-400" },
+    { name: "Vue.Js", weight: 2, color: "text-amber-300" },
+    { name: "REST API", weight: 2, color: "text-stone-400" },
     { name: "JavaScript", weight: 5, color: "text-white" },
     { name: "Redux", weight: 2, color: "text-amber-200" },
-    { name: "GIT", weight: 2, color: "text-amber-400" },
+    { name: "GIT", weight: 3, color: "text-amber-400" },
     { name: "Deployment", weight: 1, color: "text-stone-400" },
     { name: "TypeScript", weight: 3, color: "text-amber-300" },
     { name: "HTML/CSS", weight: 2, color: "text-orange-300" },
+    { name: "PHP", weight: 1, color: "text-stone-400" },
     { name: "Laravel", weight: 4, color: "text-amber-100" },
     { name: "docker", weight: 2, color: "text-orange-400" },
     { name: "Tailwind CSS", weight: 3, color: "text-orange-200" },
-    { name: "postgresql", weight: 2, color: "text-amber-400" },
+    { name: "PostgreSQL", weight: 3, color: "text-amber-400" },
     { name: "Node.js", weight: 2, color: "text-orange-200" },
-    { name: "Bootstrap", weight: 1, color: "text-stone-400" },
+    { name: "Bootstrap", weight: 1, color: "text-orange-300" },
+    { name: "MySQL", weight: 2, color: "text-stone-400" },
+    { name: "Postman", weight: 2, color: "text-orange-400" },
+    { name: "Swagger", weight: 3, color: "text-amber-400" },
+
+
   ];
 
   const getWeightClass = (weight) => {
@@ -62,7 +69,7 @@ const Skill = () => {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
         {/* Floating Icons from About.jsx style */}
-        <div className="absolute left-[15%] top-1/4 opacity-20 animate-float">
+        <div className="absolute left-[5%] top-1/4 opacity-20 animate-float">
           <svg
             viewBox="0 0 128 128"
             className="w-20 h-20 text-amber-500 fill-current drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]"
@@ -70,7 +77,7 @@ const Skill = () => {
             <path d="M64 24.3c-15.4 0-25 10-28 25 15.4-15 25-10 28 5 3 15 12.6 25 28 25 15.4 0 25-10 28-25-15.4 15-25 10-28-5-3-15-12.6-25-28-25zm-28 48c-15.4 0-25 10-28 25 15.4-15 25-10 28 5 3 15 12.6 25 28 25 15.4 0 25-10 28-25-15.4 15-25 10-28-5-3-15-12.6-25-28-25z" />
           </svg>
         </div>
-        <div className="absolute right-[10%] bottom-1/4 opacity-20 animate-float-reverse">
+        <div className="absolute right-[5%] bottom-1/4 opacity-20 animate-float-reverse">
           <svg
             viewBox="-11.5 -10.23174 23 20.46348"
             className="w-28 h-28 text-orange-600 drop-shadow-[0_0_15px_rgba(234,88,12,0.5)]"
@@ -85,10 +92,10 @@ const Skill = () => {
         </div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-24">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-12">
+      <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-8">
           {/* Left Text Content */}
-          <div className="w-full lg:w-5/12 text-center lg:text-left shrink-0 animate-fadeInUp">
+          <div className="w-full lg:w-6/12 text-center lg:text-left shrink-0 animate-fadeInUp">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6 mx-auto lg:mx-0">
               <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
               <span className="text-amber-400 text-xs uppercase tracking-widest font-bold">
