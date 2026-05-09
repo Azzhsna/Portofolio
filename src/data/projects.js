@@ -1,7 +1,12 @@
-import Risenly from "@/assets/Risenly.png";
-import Risenly2 from "@/assets/Risenly2.png";
-import Risenly3 from "@/assets/Risenly3.png";
-import Risenly4 from "@/assets/Risenly4.png";
+import lexora from "@/assets/lexora.png";
+import lexora2 from "@/assets/lexora2.png";
+import lexora3 from "@/assets/lexora3.png";
+import lexora4 from "@/assets/lexora4.png";
+import lexora5 from "@/assets/lexora5.png";
+import lexora6 from "@/assets/lexora6.png";
+import lexora7 from "@/assets/lexora7.png";
+import lexora8 from "@/assets/lexora8.png";
+import lexora9 from "@/assets/lexora9.png";
 import Airnav from "@/assets/Airnav.png";
 import Airnav2 from "@/assets/Airnav2.png";
 import Airnav3 from "@/assets/Airnav3.png";
@@ -38,8 +43,8 @@ import Travel3 from "@/assets/travel3.png";
 export const projectData = [
   {
     id: "01",
-    slug: "risenly",
-    title: "Risenly",
+    slug: "lexora",
+    title: "Lexora",
     subtitle: {
       en: "Personal Fullstack Project",
       id: "Proyek Fullstack Pribadi",
@@ -57,8 +62,7 @@ export const projectData = [
       en: [
         "AI-powered PDF to Audio conversion",
         "Integrated Pomodoro timer & focus modes",
-        "Smart note-taking & habit tracking",
-        "Global leaderboard for user motivation",
+        "Smart note-taking",
         "Podcast playlist management",
         "Cross-platform accessibility",
       ],
@@ -71,7 +75,17 @@ export const projectData = [
         "Aksesibilitas lintas platform",
       ],
     },
-    images: [Risenly, Risenly2, Risenly3, Risenly4],
+    images: [
+      lexora,
+      lexora2,
+      lexora3,
+      lexora4,
+      lexora5,
+      lexora6,
+      lexora7,
+      lexora8,
+      lexora9,
+    ],
     link: "https://day-rise-beige.vercel.app/",
     github: "#",
   },
@@ -108,7 +122,7 @@ export const projectData = [
         "Sistem QR code untuk check-in",
       ],
     },
-    images: [Airnav, Airnav3, Airnav2,],
+    images: [Airnav, Airnav3, Airnav2],
     link: "#",
     github: "#",
   },

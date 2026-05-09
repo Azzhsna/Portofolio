@@ -9,7 +9,8 @@ const Hero = () => {
     const element = document.getElementById("works");
     if (element) {
       const yOffset = -80;
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
@@ -33,14 +34,16 @@ const Hero = () => {
         <div
           className="absolute inset-0 animate-pulse"
           style={{
-            background: "radial-gradient(circle at 30% 20%, rgba(110,45,15,0.06) 0%, transparent 52%)",
+            background:
+              "radial-gradient(circle at 30% 20%, rgba(110,45,15,0.06) 0%, transparent 52%)",
             animationDuration: "4s",
           }}
         ></div>
         <div
           className="absolute inset-0 animate-pulse"
           style={{
-            background: "radial-gradient(circle at 70% 78%, rgba(140,55,15,0.06) 0%, transparent 50%)",
+            background:
+              "radial-gradient(circle at 70% 78%, rgba(140,55,15,0.06) 0%, transparent 50%)",
             animationDelay: "2s",
             animationDuration: "4s",
           }}
@@ -61,8 +64,11 @@ const Hero = () => {
             <div className="relative flex flex-col items-left justify-center min-h-screen py-16">
               {/* Top Left Tags */}
               <div className="space-y-1 animate-fadeInUp">
-                {["FrontEnd", "UIUX", "WEB"].map((tag) => (
-                  <p key={tag} className="text-amber-400 text-xs sm:text-sm font-bold tracking-widest uppercase">
+                {["FullStack", "FrontEnd", "UIUX"].map((tag) => (
+                  <p
+                    key={tag}
+                    className="text-amber-400 text-xs sm:text-sm font-bold tracking-widest uppercase"
+                  >
                     {tag}
                   </p>
                 ))}
@@ -74,9 +80,9 @@ const Hero = () => {
                 style={{ animationDelay: "0.3s" }}
               >
                 <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl  lg:pt-7 xl:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-amber-400 via-orange-500 to-red-600 leading-none tracking-tight">
-                   {t("hero.role").split(' ')[0]}
+                  {t("hero.role").split(" ")[0]}
                   <br />
-                   {t("hero.role").split(' ').slice(1).join(' ')}
+                  {t("hero.role").split(" ").slice(1).join(" ")}
                 </h2>
               </div>
 
@@ -120,25 +126,51 @@ const Hero = () => {
 
                 {/* Floating particles */}
                 <div className="absolute top-1/4 -right-10 w-3 h-3 rounded-full bg-amber-600/70 animate-float shadow-lg shadow-amber-600/30"></div>
-                <div className="absolute top-1/2 -left-10 w-2 h-2 rounded-full bg-orange-700/70 animate-float shadow-lg shadow-orange-700/30" style={{ animationDelay: "1.5s" }}></div>
-                <div className="absolute bottom-1/3 right-10 w-2 h-2 rounded-full bg-yellow-700/70 animate-float shadow-lg shadow-yellow-700/30" style={{ animationDelay: "2.5s" }}></div>
+                <div
+                  className="absolute top-1/2 -left-10 w-2 h-2 rounded-full bg-orange-700/70 animate-float shadow-lg shadow-orange-700/30"
+                  style={{ animationDelay: "1.5s" }}
+                ></div>
+                <div
+                  className="absolute bottom-1/3 right-10 w-2 h-2 rounded-full bg-yellow-700/70 animate-float shadow-lg shadow-yellow-700/30"
+                  style={{ animationDelay: "2.5s" }}
+                ></div>
               </div>
 
               {/* Bottom Left Info */}
-              <div className="absolute bottom-36 md:bottom-44  md:left-10 lg:left-5 animate-fadeInUp z-30" style={{ animationDelay: "0.5s" }}>
-                <p className="text-white/60 text-xs md:text-sm tracking-wider uppercase mb-2">Portfolio</p>
-                <p className="text-white/80 text-sm md:text-base max-w-xs">Azzah Husna Almy</p>
+              <div
+                className="absolute bottom-36 md:bottom-44  md:left-10 lg:left-5 animate-fadeInUp z-30"
+                style={{ animationDelay: "0.5s" }}
+              >
+                <p className="text-white/60 text-xs md:text-sm tracking-wider uppercase mb-2">
+                  Portfolio
+                </p>
+                <p className="text-white/80 text-sm md:text-base max-w-xs">
+                  Azzah Husna Almy
+                </p>
               </div>
 
               {/* Bottom Right CTA */}
-              <div className="absolute bottom-32 md:bottom-40 right-6 md:right-12 lg:right-15 animate-fadeInUp z-30" style={{ animationDelay: "0.6s" }}>
+              <div
+                className="absolute bottom-32 md:bottom-40 right-6 md:right-12 lg:right-15 animate-fadeInUp z-30"
+                style={{ animationDelay: "0.6s" }}
+              >
                 <button
                   onClick={scrollToWorks}
                   className="group px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-amber-700 to-orange-700 text-white rounded-full text-sm sm:text-base font-semibold hover:shadow-lg hover:shadow-orange-600/40 transition-all duration-300 hover:scale-105 flex items-center gap-2"
                 >
                   <span>{t("hero.view_projects")}</span>
-                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg
+                    className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                   </svg>
                 </button>
               </div>
@@ -154,8 +186,18 @@ const Hero = () => {
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 animate-bounce">
         <div className="flex flex-col items-center gap-2 text-gray-400">
           <span className="text-xs tracking-widest">{t("hero.scroll")}</span>
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
           </svg>
         </div>
       </div>

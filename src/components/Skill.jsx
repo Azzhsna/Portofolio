@@ -6,7 +6,7 @@ const Skill = () => {
   const skills = [
     { name: "React.js", weight: 4, color: "text-amber-100" },
     { name: "Nest.Js", weight: 2, color: "text-orange-400" },
-    { name: "Nuxt.js", weight: 4, color: "text-orange-200" },
+    { name: "Nuxt.js", weight: 4, color: "text-white" },
     { name: "UI/UX Design (Figma)", weight: 2, color: "text-orange-200" },
     { name: "Vue.Js", weight: 2, color: "text-amber-300" },
     { name: "REST API", weight: 2, color: "text-stone-400" },
@@ -17,17 +17,16 @@ const Skill = () => {
     { name: "TypeScript", weight: 3, color: "text-amber-300" },
     { name: "HTML/CSS", weight: 2, color: "text-orange-300" },
     { name: "PHP", weight: 1, color: "text-stone-400" },
+    { name: "Next.Js", weight: 4, color: "text-white" },
+    { name: "Node.js", weight: 2, color: "text-orange-200" },
     { name: "Laravel", weight: 4, color: "text-amber-100" },
     { name: "docker", weight: 2, color: "text-orange-400" },
     { name: "Tailwind CSS", weight: 3, color: "text-orange-200" },
     { name: "PostgreSQL", weight: 3, color: "text-amber-400" },
-    { name: "Node.js", weight: 2, color: "text-orange-200" },
     { name: "Bootstrap", weight: 1, color: "text-orange-300" },
     { name: "MySQL", weight: 2, color: "text-stone-400" },
     { name: "Postman", weight: 2, color: "text-orange-400" },
     { name: "Swagger", weight: 3, color: "text-amber-400" },
-
-
   ];
 
   const getWeightClass = (weight) => {
@@ -63,11 +62,9 @@ const Skill = () => {
             {t("skills.title")}
           </h2>
         </div> */}
-
       </div>
 
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-
         {/* Floating Icons from About.jsx style */}
         <div className="absolute left-[5%] top-1/4 opacity-20 animate-float">
           <svg
@@ -121,8 +118,9 @@ const Skill = () => {
               {skills.map((skill, index) => (
                 <span
                   key={index}
-                  className={`inline-block ${getWeightClass(skill.weight)} ${skill.color
-                    } hover:text-amber-400 hover:scale-110 transition-all duration-300 cursor-default select-none animate-fadeInUp`}
+                  className={`inline-block ${getWeightClass(skill.weight)} ${
+                    skill.color
+                  } hover:text-amber-400 hover:scale-110 transition-all duration-300 cursor-default select-none animate-fadeInUp`}
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   {skill.name}
