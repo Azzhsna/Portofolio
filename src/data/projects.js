@@ -52,14 +52,14 @@ export const projectData = [
       id: "Proyek Fullstack Pribadi",
     },
     desc: {
-      en: "Personal productivity platform that converts PDF documents into immersive audio podcasts.",
-      id: "Platform produktivitas pribadi yang mengubah dokumen PDF menjadi podcast audio yang imersif.",
+      en: "AI-powered productivity platform that leverages LLMs to convert PDF documents into immersive podcasts and interactive learning experiences.",
+      id: "Platform produktivitas berbasis AI yang memanfaatkan LLM untuk mengubah dokumen PDF menjadi podcast yang imersif dan pengalaman belajar interaktif.",
     },
     longDesc: {
-      en: "A comprehensive full-stack productivity ecosystem built with NuxtJS and NestJS. Beyond its innovative AI-powered PDF-to-Podcast engine, it integrates essential tools like a Pomodoro timer, smart notes, smart summary, and chat with PDF, all designed to enhance your study and productivity workflow.",
-      id: "Ekosistem produktivitas full-stack komprehensif yang dibangun dengan NuxtJS dan NestJS. Selain mesin PDF-ke-Podcast berbasis AI yang inovatif, platform ini mengintegrasikan alat penting seperti timer Pomodoro, catatan pintar, ringkasan cerdas (smart summary), dan fitur obrolan dengan PDF (chat with PDF), semuanya dirancang untuk meningkatkan alur kerja belajar dan produktivitas Anda.",
+      en: "A comprehensive full-stack ecosystem built with NuxtJS and NestJS, integrating advanced LLMs via Groq API for lightning-fast AI processing. Beyond its core PDF-to-Podcast engine, Lexora features AI-driven Smart Summaries and 'Chat with PDF' capabilities, alongside essential productivity tools like a Pomodoro timer and smart notes—all synchronized across a seamless modern interface.",
+      id: "Ekosistem full-stack komprehensif yang dibangun dengan NuxtJS dan NestJS, mengintegrasikan LLM canggih melalui Groq API untuk pemrosesan AI yang sangat cepat. Selain mesin utama PDF-ke-Podcast, Lexora memiliki fitur Ringkasan Cerdas berbasis AI dan kemampuan 'Chat dengan PDF', serta alat produktivitas penting seperti timer Pomodoro dan catatan pintar—semuanya disinkronkan dalam antarmuka modern yang mulus.",
     },
-    tech: ["NuxtJS", "NestJS", "TypeScript", "TailwindCSS", "NuxtUI"],
+    tech: ["NuxtJS", "NestJS", "TypeScript", "Groq API", "TailwindCSS", "NuxtUI"],
     features: {
       en: [
         "AI-powered PDF to Audio conversion",
