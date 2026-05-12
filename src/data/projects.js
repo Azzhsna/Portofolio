@@ -8,8 +8,10 @@ import lexora7 from "@/assets/lexora7.png";
 import lexora8 from "@/assets/lexora8.png";
 import lexora9 from "@/assets/lexora9.png";
 import Airnav from "@/assets/Airnav.png";
+import Airnav1 from "@/assets/Airnav1.png";
 import Airnav2 from "@/assets/Airnav2.png";
 import Airnav3 from "@/assets/Airnav3.png";
+import Airnav4 from "@/assets/Airnav4.png";
 import Groperti from "@/assets/Groperti.png";
 import Mason from "@/assets/Mason.png";
 import Mason1 from "@/assets/Mason1.png";
@@ -91,43 +93,80 @@ export const projectData = [
   },
   {
     id: "02",
-    slug: "airnav",
-    title: "AirNav Indonesia",
+    slug: "arsipku",
+    title: "ArsipKu",
     subtitle: {
-      en: "AirNav Platform",
-      id: "Platform AirNav",
+      en: "Digital Archiving System",
+      id: "Sistem Pengarsipan Digital",
     },
     desc: {
-      en: "Corporate event management platform for Perum LPPNPI — the Indonesian flight navigation service provider.",
-      id: "Platform manajemen event korporat untuk Perum LPPNPI — lembaga penyelenggara pelayanan navigasi penerbangan Indonesia.",
+      en: "Internal digital archiving system for AirNav (Perum LPPNPI) facilitate official correspondence and communication between employees.",
+      id: "Sistem pengarsipan digital internal untuk AirNav (Perum LPPNPI) guna mempermudah surat-menyurat resmi dan komunikasi antar karyawan.",
     },
     longDesc: {
-      en: "A corporate event management information system used by Perum LPPNPI. This platform facilitates coordination between organizers and participants in organizing seminars, training, and other corporate events.",
-      id: "Sistem informasi corporate event management yang digunakan oleh Perum LPPNPI. Platform ini mempermudah koordinasi antara panitia dan peserta dalam penyelenggaraan seminar, pelatihan, dan acara korporat lainnya.",
+      en: "An internal digital archiving system developed for AirNav (Perum LPPNPI) designed with a Gmail-like interface to facilitate official correspondence and communication between employees. I was responsible for the Admin, Superadmin, and User roles, implementing features such as letter numbering, delegation, titelature, templates, digital signatures, and corporate account management/configuration. This project involved full Back-End and Front-End integration via REST API.",
+      id: "Sistem pengarsipan digital internal yang dikembangkan untuk AirNav (Perum LPPNPI), dirancang menyerupai antarmuka Gmail untuk mempermudah komunikasi surat-menyurat resmi antar karyawan. Saya bertanggung jawab sebagai Admin, Superadmin, dan User dalam mengimplementasikan fitur penomoran surat, delegasi, titelatur, templat, tanda tangan digital (digsig), serta manajemen dan konfigurasi akun perusahaan. Proyek ini mencakup integrasi penuh antara Back-End dan Front-End melalui REST API.",
     },
     tech: ["NuxtJS", "TypeScript", "TailwindCSS", "NuxtUI"],
     features: {
       en: [
-        "Event participant registration & management",
-        "Real-time organizer dashboard",
-        "Automatic notifications via email",
-        "Export participant reports to Excel",
-        "QR code system for check-in",
+        "Letter Numbering & Delegation",
+        "Titelature & Document Templates",
+        "Digital Signature (Digsig) Integration",
+        "Corporate Account Management",
+        "Full REST API Integration (BE & FE)",
       ],
       id: [
-        "Registrasi & manajemen peserta event",
-        "Dashboard organizer real-time",
-        "Notifikasi otomatis via email",
-        "Export laporan peserta ke Excel",
-        "Sistem QR code untuk check-in",
+        "Penomoran Surat & Delegasi",
+        "Titelatur & Templat Dokumen",
+        "Integrasi Digital Signature (Digsig)",
+        "Manajemen Akun Perusahaan",
+        "Integrasi Penuh REST API (BE & FE)",
       ],
     },
-    images: [Airnav, Airnav3, Airnav2],
+    images: [Airnav, Airnav1],
     link: "#",
     github: "#",
   },
   {
     id: "03",
+    slug: "nav-event",
+    title: "NavEvent",
+    subtitle: {
+      en: "Event Management Platform",
+      id: "Platform Manajemen Event",
+    },
+    desc: {
+      en: "Corporate event management platform for Perum LPPNPI (AirNav Indonesia).",
+      id: "Platform manajemen event korporat untuk Perum LPPNPI (AirNav Indonesia).",
+    },
+    longDesc: {
+      en: "A corporate event management information system for Perum LPPNPI (AirNav Indonesia). As an Admin, I managed event operations, participant counts via barcode attendance, and displayed real-time participant data and status per session. The project included full-cycle development from REST API integration to BE and FE synchronization.",
+      id: "Sistem informasi manajemen event korporat untuk Perum LPPNPI (AirNav Indonesia). Sebagai Admin, saya mengelola jalannya acara, mengatur jumlah peserta melalui absensi barcode, serta menampilkan data dan status peserta per sesi secara real-time. Proyek ini melibatkan pengembangan tuntas mulai dari integrasi REST API hingga sinkronisasi BE dan FE.",
+    },
+    tech: ["NuxtJS", "TypeScript", "TailwindCSS", "NuxtUI"],
+    features: {
+      en: [
+        "Corporate Event Management",
+        "Barcode Attendance & Tracking",
+        "Real-time Participant Status per Session",
+        "REST API Integration (BE & FE)",
+        "Admin Dashboard for Operations",
+      ],
+      id: [
+        "Manajemen Acara Korporat",
+        "Absensi Barcode & Pelacakan Peserta",
+        "Status Peserta per Sesi Real-time",
+        "Integrasi REST API (BE & FE)",
+        "Dashboard Admin untuk Operasional",
+      ],
+    },
+    images: [Airnav2],
+    link: "#",
+    github: "#",
+  },
+  {
+    id: "04",
     slug: "groperti",
     title: "Groperti",
     subtitle: {
@@ -164,7 +203,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "04",
+    id: "05",
     slug: "mason-cafe",
     title: "Mason Cafe",
     subtitle: {
@@ -201,7 +240,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "05",
+    id: "06",
     slug: "MyMovies",
     title: "My Movies",
     subtitle: {
@@ -238,7 +277,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "06",
+    id: "07",
     slug: "Thesis",
     title: "Thesis",
     subtitle: {
@@ -275,7 +314,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "07",
+    id: "08",
     slug: "LMS",
     title: "LMS",
     subtitle: {
@@ -312,7 +351,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "08",
+    id: "09",
     slug: "Sertifica",
     title: "Sertifica",
     subtitle: {
@@ -349,7 +388,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "09",
+    id: "10",
     slug: "digishop",
     title: "Digishop",
     subtitle: {
@@ -386,7 +425,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "10",
+    id: "11",
     slug: "Travel",
     title: "Redesign Pegi-Pegi",
     subtitle: {
@@ -423,7 +462,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "11",
+    id: "12",
     slug: "revolve",
     title: "Revolve",
     subtitle: {
@@ -460,7 +499,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "12",
+    id: "13",
     slug: "caffein-line",
     title: "Caffein Line",
     subtitle: {

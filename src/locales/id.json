@@ -17,11 +17,11 @@
     "greeting": "Halo,",
     "name": "Saya Azzah Husna Almy",
     "point1_title": "Lulusan BINUS",
-    "point1_desc": "Sarjana Ilmu Komputer. Fondasi kuat yang dibangun melalui pengalaman praktis dalam Full-Stack Development, Front-End, dan UI/UX Design di berbagai peran magang yang berdampak.",
-    "point2_title": "Berbasis Desain",
-    "point2_desc": "Terlibat aktif dalam divisi Kreatif & Desain. Bersemangat dalam menciptakan aplikasi web yang memukau secara visual, berpusat pada pengguna, dan berkolaborasi dalam solusi teknologi kreatif.",
-    "point3_title": "Teknologi Modern & Adaptabilitas",
-    "point3_desc": "Pembelajar cepat dengan keterampilan pemecahan masalah yang kuat, mampu bekerja secara mulus dalam lingkungan tim. Mahir dalam menghadirkan aplikasi yang kokoh menggunakan standar modern.",
+    "point1_desc": "Sarjana Ilmu Komputer dengan fondasi kuat yang dibangun melalui pengalaman praktis dalam Full-Stack Development, Front-End, dan UI/UX Design.",
+    "point2_title": "Pengalaman & Perjalanan",
+    "point2_desc": "Perjalanan saya dimulai dari BINUS University hingga berkembang lewat berbagai peran di perusahaan teknologi dan BUMN seperti AirNav Indonesia.",
+    "point3_title": "Komitmen & Teknologi",
+    "point3_desc": "Saya terbiasa bekerja mandiri maupun tim, bertanggung jawab penuh, dan senang mempelajari hal baru serta teknologi modern untuk terus berkembang.",
     "contact_me": "HUBUNGI SAYA"
   },
   "skills": {
@@ -58,7 +58,7 @@
     "items": [
       {
         "role": "FrontEnd Developer",
-        "company": "AirNav Indonesia",
+        "company": "AirNav Indonesia (BUMN)",
         "location": "Tangerang",
         "period": "Nov 2025 - Apr 2026",
         "type": "Magang",

@@ -17,11 +17,11 @@
     "greeting": "Hello,",
     "name": "I'm Azzah Husna Almy",
     "point1_title": "BINUS Graduate",
-    "point1_desc": "Bachelor’s in Computer Science. Strong foundation built through hands-on experience in Full-Stack Development, Front-End, and UI/UX Design across multiple impactful internship roles.",
-    "point2_title": "Design-Driven",
-    "point2_desc": "Actively involved in Creative & Design divisions. Passionate about creating visually stunning, user-centric web applications and collaborating on creative tech solutions.",
-    "point3_title": "Modern Tech Stack & Adaptability",
-    "point3_desc": "Fast learner with strong problem-solving skills, able to work seamlessly in team environments. Proficient in delivering robust applications using modern standards.",
+    "point1_desc": "Bachelor's in Computer Science. Strong foundation built through hands-on experience in Full-Stack Development, Front-End, and UI/UX Design.",
+    "point2_title": "Experience & Journey",
+    "point2_desc": "My journey began at BINUS University and has evolved through various roles in technology companies and State-Owned Enterprises (BUMN) like AirNav Indonesia.",
+    "point3_title": "Commitment & Technology",
+    "point3_desc": "I am accustomed to working independently or in teams, taking full responsibility, and enjoy learning new things and modern technologies to keep growing.",
     "contact_me": "CONTACT ME"
   },
   "skills": {
@@ -58,7 +58,7 @@
     "items": [
       {
         "role": "FrontEnd Developer",
-        "company": "AirNav Indonesia",
+        "company": "AirNav Indonesia (Perum LPPNPI)",
         "location": "Tangerang",
         "period": "Nov 2025 - Apr 2026",
         "type": "Internship",
