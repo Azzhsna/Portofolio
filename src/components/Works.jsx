@@ -84,7 +84,7 @@ const ProjectCard = ({ project, index }) => {
                 backgroundClip: "text",
               }}
             >
-              {project.id}
+              {String(index + 1).padStart(2, '0')}
             </span>
             <span
               className="text-[9px] uppercase tracking-[2px] px-2.5 py-1 rounded-full mt-1"
@@ -148,10 +148,16 @@ const ProjectCard = ({ project, index }) => {
 };
 
 // ── Header ────────────────────────────────────────────────────────────────
-const WorksHeader = () => {
+const WorksHeader = ({ activeFilter, setActiveFilter }) => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
   const { t } = useTranslation();
+
+  const filters = [
+    { id: "all", label: t("works.filters.all") },
+    { id: "web-development", label: t("works.filters.web_dev") },
+    { id: "ui-ux", label: t("works.filters.ui_ux") },
+  ];
 
   useEffect(() => {
     const el = ref.current;
@@ -243,12 +249,51 @@ const WorksHeader = () => {
       >
         {t("works.description")}
       </p>
+
+      {/* ── Filters ── */}
+      <div
+        className="flex flex-wrap items-center justify-center gap-3 mt-10"
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateY(0)" : "translateY(10px)",
+          transition: "opacity 0.6s ease 0.45s, transform 0.6s ease 0.45s",
+        }}
+      >
+        {filters.map((filter) => (
+          <button
+            key={filter.id}
+            onClick={() => setActiveFilter(filter.id)}
+            className="px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold transition-all duration-300 border"
+            style={{
+              background:
+                activeFilter === filter.id
+                  ? "linear-gradient(135deg, #fbbf24 0%, #f97316 100%)"
+                  : "transparent",
+              color: activeFilter === filter.id ? "#000" : "rgba(255,255,255,0.6)",
+              borderColor:
+                activeFilter === filter.id ? "transparent" : "rgba(217,119,6,0.3)",
+              boxShadow: activeFilter === filter.id 
+                ? "0 4px 15px rgba(249,115,22,0.3)" 
+                : "none",
+            }}
+          >
+            {filter.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
 
 // ── Main Works Section ───────────────────────────────────────────────────
 const Works = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const filteredProjects = projectData.filter((project) => {
+    if (activeFilter === "all") return true;
+    return project.category.includes(activeFilter);
+  });
+
   return (
     <section
       id="works"
@@ -339,11 +384,11 @@ const Works = () => {
 
       {/* ── Content Container ── */}
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-10 xl:px-16">
-        <WorksHeader />
+        <WorksHeader activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
 
         {/* ── Project Grid ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {projectData.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <ProjectCard
               key={project.id}
               project={project}

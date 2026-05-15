@@ -49,6 +49,11 @@
     "title": "KARYA",
     "subtitle": "Saya",
     "description": "Jelajahi koleksi aplikasi web, sistem desain, dan pengalaman digital saya.",
+    "filters": {
+      "all": "Semua",
+      "web_dev": "Web Development",
+      "ui_ux": "UI UX"
+    },
     "view_project": "Lihat Proyek →"
   },
   "experience": {

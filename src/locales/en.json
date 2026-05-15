@@ -49,6 +49,11 @@
     "title": "MY",
     "subtitle": "Works",
     "description": "Explore my collection of web applications, design systems, and digital experiences.",
+    "filters": {
+      "all": "All",
+      "web_dev": "Web Development",
+      "ui_ux": "UI UX"
+    },
     "view_project": "View Project →"
   },
   "experience": {

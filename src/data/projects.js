@@ -46,6 +46,7 @@ export const projectData = [
   {
     id: "01",
     slug: "lexora",
+    category: ["web-development"],
     title: "Lexora",
     subtitle: {
       en: "Personal Fullstack Project",
@@ -95,6 +96,7 @@ export const projectData = [
   {
     id: "02",
     slug: "arsipku",
+    category: ["web-development"],
     title: "ArsipKu",
     subtitle: {
       en: "Digital Archiving System",
@@ -132,6 +134,7 @@ export const projectData = [
   {
     id: "03",
     slug: "nav-event",
+    category: ["web-development"],
     title: "NavEvent",
     subtitle: {
       en: "Event Management Platform",
@@ -169,6 +172,7 @@ export const projectData = [
   {
     id: "04",
     slug: "groperti",
+    category: ["ui-ux"],
     title: "Groperti",
     subtitle: {
       en: "Real Estate Platform",
@@ -206,6 +210,7 @@ export const projectData = [
   {
     id: "05",
     slug: "mason-cafe",
+    category: ["web-development", "ui-ux"],
     title: "Mason Cafe",
     subtitle: {
       en: "Restaurant Website",
@@ -243,6 +248,7 @@ export const projectData = [
   {
     id: "06",
     slug: "MyMovies",
+    category: ["web-development", "ui-ux"],
     title: "My Movies",
     subtitle: {
       en: "Movie Streaming",
@@ -280,6 +286,7 @@ export const projectData = [
   {
     id: "07",
     slug: "Thesis",
+    category: ["web-development", "ui-ux"],
     title: "Thesis",
     subtitle: {
       en: "Academic Platform",
@@ -317,6 +324,7 @@ export const projectData = [
   {
     id: "08",
     slug: "LMS",
+    category: ["web-development"],
     title: "LMS",
     subtitle: {
       en: "E-Learning Platform",
@@ -354,6 +362,7 @@ export const projectData = [
   {
     id: "09",
     slug: "Sertifica",
+    category: ["web-development", "ui-ux"],
     title: "Sertifica",
     subtitle: {
       en: "Certification System",
@@ -391,6 +400,7 @@ export const projectData = [
   {
     id: "10",
     slug: "digishop",
+    category: ["web-development"],
     title: "Digishop",
     subtitle: {
       en: "E-Commerce",
@@ -428,6 +438,7 @@ export const projectData = [
   {
     id: "11",
     slug: "Travel",
+    category: ["ui-ux"],
     title: "Redesign Pegi-Pegi",
     subtitle: {
       en: "Travel App Concept",
@@ -465,6 +476,7 @@ export const projectData = [
   {
     id: "12",
     slug: "revolve",
+    category: ["ui-ux"],
     title: "Revolve",
     subtitle: {
       en: "Fashion Concept",
@@ -502,6 +514,7 @@ export const projectData = [
   {
     id: "13",
     slug: "caffein-line",
+    category: ["web-development"],
     title: "Caffein Line",
     subtitle: {
       en: "Coffee Brand",
