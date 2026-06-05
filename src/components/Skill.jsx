@@ -26,7 +26,7 @@ const Skill = () => {
     { name: "Bootstrap", weight: 1, color: "text-orange-300" },
     { name: "MySQL", weight: 2, color: "text-stone-400" },
     // { name: "Postman", weight: 2, color: "text-orange-400" },
-    { name: "Swagger", weight: 3, color: "text-amber-400" },
+    { name: "Swagger", weight: 3, color: "text-white-400" },
   ];
 
   const getWeightClass = (weight) => {
