@@ -41,10 +41,62 @@ import Caffeinline from "@/assets/Caffein-line.png";
 import Travel from "@/assets/travel.png";
 import Travel2 from "@/assets/travel2.png";
 import Travel3 from "@/assets/travel3.png";
+import CourtReport from "@/assets/CourtReport.png";
+import CourtReport2 from "@/assets/CourtReport2.png";
+import CourtReport3 from "@/assets/CourtReport3.png";
+import CourtReport4 from "@/assets/CourtReport4.png";
 
 export const projectData = [
   {
     id: "01",
+    slug: "Court Report",
+    category: ["web-development"],
+    title: "Court Reporting",
+    subtitle: {
+      en: "Fullstack Workflow Manager",
+      id: "Fullstack Workflow Manager",
+    },
+    desc: {
+      en: "A workflow management application designed to help court reporting agencies manage transcription jobs, assign reporters & editors, and automate payment calculations.",
+      id: "Aplikasi manajemen workflow yang dirancang untuk membantu agensi court reporting dalam mengelola pekerjaan transkripsi, menugaskan reporter & editor, dan menghitung pembayaran secara otomatis.",
+    },
+    longDesc: {
+      en: "Court Reporting Workflow Manager is an application designed to help court reporting agencies manage the transcription workflow in a structured manner. The app allows admins to create and manage jobs based on received cases, assign reporters for transcription, assign editors for review, monitor work progress through workflow statuses, and automatically calculate reporter and editor payments based on predefined rules. With this system, job monitoring, resource assignment, and cost calculation can be done more efficiently and in an organized way.",
+      id: "Court Reporting Workflow Manager adalah aplikasi yang dirancang untuk membantu agensi court reporting dalam mengelola proses pekerjaan transkripsi secara terstruktur. Aplikasi ini memungkinkan admin membuat dan mengelola job berdasarkan kasus yang diterima, menugaskan reporter untuk melakukan transkripsi, menugaskan editor untuk melakukan proses review, memantau progres pekerjaan melalui workflow status, serta menghitung pembayaran reporter dan editor secara otomatis berdasarkan aturan yang telah ditentukan. Dengan adanya sistem ini, proses monitoring pekerjaan, penugasan sumber daya, dan perhitungan biaya dapat dilakukan dengan lebih efisien dan terorganisir.",
+    },
+    tech: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "SQLite",
+    ],
+    features: {
+      en: [
+        "Job creation & management based on case intake",
+        "Reporter assignment for transcription tasks",
+        "Editor assignment for review process",
+        "Workflow status tracking & progress monitoring",
+        "Automated payment calculation for reporters & editors",
+        "Admin dashboard for resource & cost management",
+      ],
+      id: [
+        "Pembuatan & manajemen job berdasarkan kasus yang diterima",
+        "Penugasan reporter untuk proses transkripsi",
+        "Penugasan editor untuk proses review",
+        "Tracking status workflow & monitoring progres",
+        "Perhitungan pembayaran otomatis untuk reporter & editor",
+        "Dashboard admin untuk manajemen sumber daya & biaya",
+      ],
+    },
+    images: [CourtReport, CourtReport2, CourtReport3, CourtReport4],
+    link: "https://day-rise-beige.vercel.app/",
+    github: "#",
+  },
+  {
+    id: "02",
     slug: "lexora",
     category: ["web-development"],
     title: "Lexora",
@@ -60,7 +112,14 @@ export const projectData = [
       en: "A comprehensive full-stack ecosystem built with NuxtJS and NestJS, integrating advanced LLMs via Groq API for lightning-fast AI processing. Beyond its core PDF-to-Podcast engine, Lexora features AI-driven Smart Summaries and 'Chat with PDF' capabilities, alongside essential productivity tools like a Pomodoro timer and smart notes—all synchronized across a seamless modern interface.",
       id: "Ekosistem full-stack komprehensif yang dibangun dengan NuxtJS dan NestJS, mengintegrasikan LLM canggih melalui Groq API untuk pemrosesan AI yang sangat cepat. Selain mesin utama PDF-ke-Podcast, Lexora memiliki fitur Ringkasan Cerdas berbasis AI dan kemampuan 'Chat dengan PDF', serta alat produktivitas penting seperti timer Pomodoro dan catatan pintar—semuanya disinkronkan dalam antarmuka modern yang mulus.",
     },
-    tech: ["NuxtJS", "NestJS", "TypeScript", "Groq API", "TailwindCSS", "NuxtUI"],
+    tech: [
+      "NuxtJS",
+      "NestJS",
+      "TypeScript",
+      "Groq API",
+      "TailwindCSS",
+      "NuxtUI",
+    ],
     features: {
       en: [
         "AI-powered PDF to Audio conversion",
@@ -94,7 +153,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "02",
+    id: "03",
     slug: "arsipku",
     category: ["web-development"],
     title: "ArsipKu",
@@ -132,7 +191,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "03",
+    id: "04",
     slug: "nav-event",
     category: ["web-development"],
     title: "NavEvent",
@@ -170,7 +229,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "04",
+    id: "05",
     slug: "groperti",
     category: ["ui-ux"],
     title: "Groperti",
@@ -208,7 +267,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "05",
+    id: "06",
     slug: "mason-cafe",
     category: ["web-development", "ui-ux"],
     title: "Mason Cafe",
@@ -246,7 +305,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "06",
+    id: "07",
     slug: "MyMovies",
     category: ["web-development", "ui-ux"],
     title: "My Movies",
@@ -284,7 +343,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "07",
+    id: "08",
     slug: "Thesis",
     category: ["web-development", "ui-ux"],
     title: "Thesis",
@@ -322,7 +381,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "08",
+    id: "09",
     slug: "LMS",
     category: ["web-development"],
     title: "LMS",
@@ -360,7 +419,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "09",
+    id: "10",
     slug: "Sertifica",
     category: ["web-development", "ui-ux"],
     title: "Sertifica",
@@ -398,7 +457,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "10",
+    id: "11",
     slug: "digishop",
     category: ["web-development"],
     title: "Digishop",
@@ -436,7 +495,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "11",
+    id: "12",
     slug: "Travel",
     category: ["ui-ux"],
     title: "Redesign Pegi-Pegi",
@@ -474,7 +533,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "12",
+    id: "13",
     slug: "revolve",
     category: ["ui-ux"],
     title: "Revolve",
@@ -512,7 +571,7 @@ export const projectData = [
     github: "#",
   },
   {
-    id: "13",
+    id: "14",
     slug: "caffein-line",
     category: ["web-development"],
     title: "Caffein Line",
